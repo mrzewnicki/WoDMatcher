@@ -1,0 +1,209 @@
+.app {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero__brand {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.hero__title {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.hero__lead {
+  margin: 0;
+  max-width: 38rem;
+  color: var(--ink-muted);
+  line-height: 1.45;
+}
+
+.pool-picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.85rem 1rem;
+  padding: 1.1rem 1.2rem;
+  background: color-mix(in srgb, var(--bg-panel) 88%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  backdrop-filter: blur(6px);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: min(100%, 14rem);
+  flex: 1;
+}
+
+.field span {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.field select {
+  appearance: none;
+  padding: 0.65rem 0.8rem;
+  color: var(--ink);
+  font: inherit;
+  background:
+    linear-gradient(135deg, transparent 70%, rgba(156, 43, 43, 0.25)),
+    #241612;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.field select:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent-soft) 70%, white);
+  outline-offset: 2px;
+}
+
+.pool-picker__plus {
+  align-self: center;
+  padding-top: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--accent-soft);
+}
+
+.clear-btn {
+  align-self: end;
+  padding: 0.65rem 1rem;
+  color: var(--ink);
+  font: inherit;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  border-color: var(--accent-soft);
+}
+
+.hint {
+  margin: 1.5rem 0 0;
+  color: var(--ink-muted);
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.results__summary {
+  margin: 0 0 1.25rem;
+  color: var(--ink-muted);
+}
+
+.results__group {
+  margin-bottom: 2rem;
+}
+
+.results__group h2 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.results__grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.power-card {
+  padding: 1rem 1.05rem 1.1rem;
+  background: color-mix(in srgb, var(--bg-panel) 92%, black);
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+}
+
+.power-card--full {
+  border-left-color: var(--full);
+}
+
+.power-card--partial {
+  border-left-color: var(--partial);
+}
+
+.power-card__header {
+  margin-bottom: 0.65rem;
+}
+
+.power-card__title {
+  margin: 0.35rem 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.power-card__meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.power-card__pool,
+.power-card__clans,
+.power-card__detail {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.label {
+  color: var(--ink-muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.badge--full {
+  color: #d8f0e0;
+  background: color-mix(in srgb, var(--full) 70%, black);
+}
+
+.badge--partial {
+  color: #f5e6c8;
+  background: color-mix(in srgb, var(--partial) 75%, black);
+}
+
+@media (max-width: 560px) {
+  .pool-picker__plus {
+    display: none;
+  }
+
+  .clear-btn {
+    width: 100%;
+  }
+}

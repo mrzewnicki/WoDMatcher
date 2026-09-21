@@ -1,0 +1,62 @@
+{
+  "clans": {
+    "Brujah": {
+      "disciplines": [
+        "Celerity",
+        "Potence",
+        "Presence"
+      ]
+    },
+    "Gangrel": {
+      "disciplines": [
+        "Animalism",
+        "Fortitude",
+        "Protean"
+      ]
+    },
+    "Malkavian": {
+      "disciplines": [
+        "Auspex",
+        "Dominate",
+        "Obfuscate"
+      ]
+    },
+    "Nosferatu": {
+      "disciplines": [
+        "Animalism",
+        "Obfuscate",
+        "Potence"
+      ]
+    },
+    "Toreador": {
+      "disciplines": [
+        "Auspex",
+        "Celerity",
+        "Presence"
+      ]
+    },
+    "Tremere": {
+      "disciplines": [
+        "Auspex",
+        "Dominate",
+        "Blood Sorcery"
+      ]
+    },
+    "Ventrue": {
+      "disciplines": [
+        "Dominate",
+        "Fortitude",
+        "Presence"
+      ]
+    },
+    "Caitiff": {
+      "disciplines": [],
+      "special_rule": "Three Disciplines of the player's choice following the Embrace. These are not considered in-clan for experience cost purposes."
+    },
+    "Thin-Blooded": {
+      "disciplines": [
+        "Thin-Blood Alchemy"
+      ]
+    }
+  }
+}
