@@ -14,6 +14,65 @@ const ATTRIBUTES = new Set([
   'Resolve',
 ])
 
+/** Canonical V5 skills that can appear in discipline dice pools. */
+const SKILLS = new Set([
+  'Athletics',
+  'Brawl',
+  'Craft',
+  'Drive',
+  'Firearms',
+  'Larceny',
+  'Melee',
+  'Stealth',
+  'Survival',
+  'Animal Ken',
+  'Etiquette',
+  'Insight',
+  'Intimidation',
+  'Leadership',
+  'Performance',
+  'Persuasion',
+  'Streetwise',
+  'Subterfuge',
+  'Academics',
+  'Awareness',
+  'Finance',
+  'Investigation',
+  'Medicine',
+  'Occult',
+  'Politics',
+  'Science',
+  'Technology',
+  'Alchemy',
+])
+
+const DISCIPLINES = new Set([
+  'Animalism',
+  'Auspex',
+  'Blood Sorcery',
+  'Celerity',
+  'Dominate',
+  'Fortitude',
+  'Obfuscate',
+  'Potence',
+  'Presence',
+  'Protean',
+  'Thin-Blood Alchemy',
+])
+
+export type TraitGroups = {
+  skills: string[]
+  disciplines: string[]
+  other: string[]
+}
+
+function classifyTrait(trait: string): keyof TraitGroups {
+  if (DISCIPLINES.has(trait)) return 'disciplines'
+  if (SKILLS.has(trait)) return 'skills'
+  if (ATTRIBUTES.has(trait)) return 'other'
+  return 'other'
+}
+
 type RawPower = {
   name?: string
   cost?: string
@@ -112,20 +171,32 @@ export function flattenPowers(
 
 export function collectTraitOptions(powers: PowerEntry[]): {
   attributes: string[]
-  traits: string[]
+  traits: TraitGroups
 } {
   const attributes = new Set<string>()
-  const traits = new Set<string>()
+  const skills = new Set<string>()
+  const disciplines = new Set<string>()
+  const other = new Set<string>()
 
   for (const power of powers) {
     for (const term of power.terms) {
       if (ATTRIBUTES.has(term.attribute)) attributes.add(term.attribute)
-      traits.add(term.trait)
+
+      const group = classifyTrait(term.trait)
+      if (group === 'skills') skills.add(term.trait)
+      else if (group === 'disciplines') disciplines.add(term.trait)
+      else other.add(term.trait)
     }
   }
 
+  const byName = (a: string, b: string) => a.localeCompare(b)
+
   return {
-    attributes: [...attributes].sort((a, b) => a.localeCompare(b)),
-    traits: [...traits].sort((a, b) => a.localeCompare(b)),
+    attributes: [...attributes].sort(byName),
+    traits: {
+      skills: [...skills].sort(byName),
+      disciplines: [...disciplines].sort(byName),
+      other: [...other].sort(byName),
+    },
   }
 }

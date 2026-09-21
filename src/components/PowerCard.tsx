@@ -16,7 +16,7 @@ export function PowerCard({ result, clans }: Props) {
         </span>
         <h3 className="power-card__title">{power.name}</h3>
         <p className="power-card__meta">
-          {power.discipline} · •{power.level}
+          {power.discipline} · lvl {power.level}
           {power.amalgam ? ` · Amalgam: ${power.amalgam}` : ''}
         </p>
       </header>

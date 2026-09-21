@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import disciplinesData from '../data/V5_disciplines.json'
 import clanData from '../data/V5_clan_disciplines.json'
 import { PowerCard } from './components/PowerCard'
+import { GroupedSelect } from './components/GroupedSelect'
 import {
   collectTraitOptions,
   flattenPowers,
@@ -15,7 +16,9 @@ type ClanMap = {
 
 const powers = flattenPowers(disciplinesData as Parameters<typeof flattenPowers>[0])
 const { attributes, traits } = collectTraitOptions(powers)
-const clansByDiscipline = buildClanIndex(clanData as ClanMap)
+const typedClanData = clanData as ClanMap
+const clansByDiscipline = buildClanIndex(typedClanData)
+const clanNames = Object.keys(typedClanData.clans).sort((a, b) => a.localeCompare(b))
 
 function buildClanIndex(data: ClanMap): Record<string, string[]> {
   const index: Record<string, string[]> = {}
@@ -28,18 +31,58 @@ function buildClanIndex(data: ClanMap): Record<string, string[]> {
   return index
 }
 
+function filterByClan(
+  results: ReturnType<typeof matchPowers>,
+  clan: string,
+): ReturnType<typeof matchPowers> {
+  if (!clan) return results
+  const info = typedClanData.clans[clan]
+  if (!info) return results
+  // Caitiff: any disciplines of player's choice — no narrowing.
+  if (info.disciplines.length === 0) return results
+  const allowed = new Set(info.disciplines)
+  return results.filter((r) => allowed.has(r.power.discipline))
+}
+
 export default function App() {
   const [attribute, setAttribute] = useState<string>('')
   const [trait, setTrait] = useState<string>('')
+  const [clan, setClan] = useState<string>('')
 
-  const matches = useMemo(
-    () => matchPowers(powers, attribute || null, trait || null),
-    [attribute, trait],
-  )
+  const clanInfo = clan ? typedClanData.clans[clan] : null
+
+  const traitGroups = useMemo(() => {
+    if (!clanInfo || clanInfo.disciplines.length === 0) return traits
+    const allowed = new Set(clanInfo.disciplines)
+    return {
+      ...traits,
+      disciplines: traits.disciplines.filter((d) => allowed.has(d)),
+    }
+  }, [clanInfo])
+
+  const matches = useMemo(() => {
+    const raw = matchPowers(powers, attribute || null, trait || null)
+    return filterByClan(raw, clan)
+  }, [attribute, trait, clan])
 
   const full = matches.filter((m) => m.kind === 'full')
   const partial = matches.filter((m) => m.kind === 'partial')
   const hasSelection = Boolean(attribute || trait)
+  const hasFilters = Boolean(attribute || trait || clan)
+
+  const onClanChange = (next: string) => {
+    setClan(next)
+    const info = next ? typedClanData.clans[next] : null
+    if (
+      trait &&
+      info &&
+      info.disciplines.length > 0 &&
+      traits.disciplines.includes(trait) &&
+      !info.disciplines.includes(trait)
+    ) {
+      setTrait('')
+    }
+  }
 
   return (
     <div className="app">
@@ -47,56 +90,83 @@ export default function App() {
         <p className="hero__brand">Vampire Matcher</p>
         <h1 className="hero__title">Szukaj mocy po puli kości</h1>
         <p className="hero__lead">
-          Wybierz atrybut i umiejętność / dyscyplinę. Pełny match wymaga obu;
-          częściowy — jednego z dwóch.
+          Wybierz atrybut i umiejętność / dyscyplinę. Pełny match wymaga obu
+          wskazanych argumentów w puli; częściowy — tylko jednego.
         </p>
       </header>
 
-      <section className="pool-picker" aria-label="Wybór puli kości">
-        <label className="field">
-          <span>Atrybut</span>
-          <select
-            value={attribute}
-            onChange={(e) => setAttribute(e.target.value)}
-          >
-            <option value="">— dowolny —</option>
-            {attributes.map((a) => (
-              <option key={a} value={a}>
-                {a}
-              </option>
-            ))}
-          </select>
-        </label>
+      <div className="filters">
+        <section className="pool-picker" aria-label="Wybór puli kości">
+          <label className="field">
+            <span>Atrybut</span>
+            <select
+              value={attribute}
+              onChange={(e) => setAttribute(e.target.value)}
+            >
+              <option value="">— dowolny —</option>
+              {attributes.map((a) => (
+                <option key={a} value={a}>
+                  {a}
+                </option>
+              ))}
+            </select>
+          </label>
 
-        <span className="pool-picker__plus" aria-hidden="true">
-          +
-        </span>
+          <span className="pool-picker__plus" aria-hidden="true">
+            +
+          </span>
 
-        <label className="field">
-          <span>Umiejętność / Dyscyplina</span>
-          <select value={trait} onChange={(e) => setTrait(e.target.value)}>
-            <option value="">— dowolna —</option>
-            {traits.map((t) => (
-              <option key={t} value={t}>
-                {t}
-              </option>
-            ))}
-          </select>
-        </label>
+          <label className="field">
+            <span>Umiejętność / Dyscyplina</span>
+            <GroupedSelect
+              value={trait}
+              onChange={setTrait}
+              groups={traitGroups}
+            />
+          </label>
 
-        {(attribute || trait) && (
-          <button
-            type="button"
-            className="clear-btn"
-            onClick={() => {
-              setAttribute('')
-              setTrait('')
-            }}
-          >
-            Wyczyść
-          </button>
-        )}
-      </section>
+          {hasFilters && (
+            <button
+              type="button"
+              className="clear-btn"
+              onClick={() => {
+                setAttribute('')
+                setTrait('')
+                setClan('')
+              }}
+            >
+              Wyczyść
+            </button>
+          )}
+        </section>
+
+        <section className="clan-filter" aria-label="Filtr klanu">
+          <label className="field field--clan">
+            <span>Klan</span>
+            <select value={clan} onChange={(e) => onClanChange(e.target.value)}>
+              <option value="">— dowolny —</option>
+              {clanNames.map((name) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          {clanInfo && (
+            <p className="clan-filter__hint">
+              {clanInfo.disciplines.length > 0 ? (
+                <>
+                  Dyscypliny klanowe:{' '}
+                  <strong>{clanInfo.disciplines.join(', ')}</strong>
+                </>
+              ) : (
+                <>{clanInfo.special_rule ?? 'Brak stałych dyscyplin klanowych.'}</>
+              )}
+            </p>
+          )}
+        </section>
+      </div>
 
       {!hasSelection && (
         <p className="hint">Wybierz przynajmniej jeden element puli, aby zobaczyć wyniki.</p>
@@ -109,6 +179,7 @@ export default function App() {
             {attribute && trait ? ` dla ${attribute} + ${trait}` : ''}
             {attribute && !trait ? ` dla atrybutu ${attribute}` : ''}
             {!attribute && trait ? ` dla cechy ${trait}` : ''}
+            {clan ? ` · klan ${clan}` : ''}
           </p>
 
           {full.length > 0 && (
