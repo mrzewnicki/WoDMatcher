@@ -77,10 +77,6 @@ export function PowerCard({ result }: Props) {
 
       {power.cost && <DetailLine label="Koszt" value={power.cost} />}
       {power.duration && <DetailLine label="Czas" value={power.duration} />}
-      {power.ingredients && (
-        <DetailLine label="Składniki" value={power.ingredients} />
-      )}
-      {power.process && <DetailLine label="Proces" value={power.process} />}
 
       {source && (
         <p className="power-card__source">

@@ -97,7 +97,7 @@ type RawPower = {
   cost?: string
   duration?: string
   amalgam?: string
-  system?: string
+  prerequisite?: string
   dice_pools?: string[]
   sources?: RawSource[]
 }
@@ -249,7 +249,7 @@ export function flattenPowers(
           cost: power.cost,
           duration: power.duration,
           amalgam: power.amalgam,
-          system: power.system,
+          prerequisite: power.prerequisite,
           rawPools,
           terms,
         })

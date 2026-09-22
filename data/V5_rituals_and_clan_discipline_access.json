@@ -947,164 +947,106 @@
   "ritual_details": {
     "Players Guide": {
       "Douse the Fear": {
-        "level": 1,
-        "ingredients": "A holy object such as a crucifix, Bible, or Qur'an.",
-        "process": "Expose the holy symbol to a flame without needing to destroy it.",
-        "system": "+2 dice to rolls resisting Rötschreck; a critical win removes the need for Terror Frenzy rolls. Lasts one night."
+        "level": 1
       },
       "Seal the Brand": {
-        "level": 1,
-        "ingredients": "Molten silver poured over a tattoo, brand, or other body modification.",
-        "process": "Pour molten silver over the mark. The target suffers Superficial damage, then the modification becomes permanent once mended.",
-        "system": "The body modification becomes permanent and cannot be removed by other means."
+        "level": 1
       },
       "As Fog on Water": {
-        "level": 2,
-        "ingredients": "A piece of wood from a ship and water.",
-        "process": "Submerge the wood in the target body of water while spilling Blood into it.",
-        "system": "On a successful Ritual roll, the vampire can walk silently across the surface for the rest of the night."
+        "level": 2
       },
       "Calix Secretus": {
-        "level": 2,
-        "ingredients": "A hand-sized object and the user's Blood.",
-        "process": "Drench the object in Blood and speak the Ritual words.",
-        "system": "After an hour and a successful roll, Blood can be stored in the object. Every two Rouse Checks worth of stored Blood can sate one Hunger when released."
+        "level": 2
       },
       "Soporific Touch": {
-        "level": 2,
-        "ingredients": "A small amount of hashish or another narcotic.",
-        "process": "Mix the substance with the user's Blood and rub it between the fingers while reciting the incantation.",
-        "system": "After contact, the target resists the Ritual; on a win the target suffers a penalty equal to the margin on resistance pools involving Composure or Resolve for the remainder of the scene."
+        "level": 2
       },
       "Fire in the Blood": {
         "level": 3,
-        "ingredients": "Target's blood sample, a visual depiction of the target, and a red-wax candle or iron lighter.",
-        "process": "Burn the blood sample while concentrating on the target's image.",
-        "system": "Contest the Ritual against Resolve + Occult or Resolve + Fortitude. Each margin success inflicts one Superficial Health damage and imposes a -2 Physical penalty for the scene; critical raises the penalty to -3."
+        "dice_pools": [
+          "Resolve + Occult",
+          "Resolve + Fortitude"
+        ]
       },
       "One with the Blade": {
-        "level": 3,
-        "ingredients": "A melee weapon and enough of the caster's vitae to immerse it.",
-        "process": "Submerge the weapon in Blood and swear an oath over it until the following sunrise.",
-        "system": "The weapon becomes mystically dedicated to the vampire. When anointed with the user's Blood it gains +2 dice in combat for one scene. Only one such weapon may be dedicated at a time."
+        "level": 3
       },
       "Feast of Ashes": {
         "level": 4,
-        "ingredients": "Parchment with the target's name, the parchment's ashes, and the caster's Blood.",
-        "process": "Burn the parchment, collect the ashes, and use them with Blood to write the Ritual sigils.",
-        "system": "On a successful contest against Resolve + Willpower, the target cannot consume Blood for one night. Ash alone can sate Hunger, and cannot reduce it below 3."
+        "dice_pools": [
+          "Resolve + Willpower"
+        ]
       },
       "Guided Memory": {
         "level": 4,
-        "ingredients": "Another vampire's vitae, dried rosemary, and fresh poppies or forget-me-nots.",
-        "process": "Burn the flowers and rosemary, blend the ashes with the donor's vitae, and drink it.",
-        "system": "Enters a guided Memoriam and may acquire a temporary Level 1-3 Discipline power or Merit appropriate to the memory. Gifts fade after the session.",
         "notes": "The Storyteller decides the exact gift available from the Memoriam."
       },
       "Invisible Chains of Binding": {
         "level": 4,
-        "ingredients": "A link of chain.",
-        "process": "Inscribed with the caster's Blood over an hour and thrown at the target when activated.",
-        "system": "Contest against Strength + Resolve. The target is unable to move from the spot for one hour per margin success while the link remains intact and within roughly 3 meters. The target suffers a four-dice penalty to physical defense, Brawl, and Melee actions."
+        "dice_pools": [
+          "Strength + Resolve"
+        ]
       },
       "Antebrachia Ignium": {
-        "level": 5,
-        "ingredients": "Enough vampire vitae to coat the arms to the elbows and a flame source.",
-        "process": "Immerse both arms in Blood, then expose the coating to flame so the vitae ignites rather than the vampire.",
-        "system": "Creates controllable flames on the arms that can set targets alight and inflict Aggravated damage. Hunger 4+ requires a Hunger Frenzy test to avoid draining the ingredients."
+        "level": 5
       }
     },
     "Camarilla": {
       "Ishtar's Touch": {
-        "level": 2,
-        "ingredients": "A small amount of hashish or another narcotic.",
-        "process": "Mix the narcotic with the user's Blood and rub it between the fingers while chanting.",
-        "system": "After contact, the target resists the Ritual. On a win, the target suffers a penalty equal to the Ritual margin on resistance pools involving Composure or Resolve for the scene."
+        "level": 2
       },
       "One with the Blade": {
-        "level": 3,
-        "ingredients": "A melee weapon and enough vitae to immerse it.",
-        "process": "Submerge the weapon in vitae and dedicate it until sunrise.",
-        "system": "Creates a mystically dedicated weapon that remains pristine while owned by the caster and can receive +2 dice when anointed with the caster's Blood."
+        "level": 3
       }
     },
     "Cults of the Blood Gods": {
       "Coax the Garden": {
-        "level": 1,
-        "ingredients": "Human blood and poppy seeds.",
-        "process": "Cast the blood-and-poppy-seed mixture onto the earth to rouse nearby plant life.",
-        "system": "Animated plants impose a -2 Physical penalty within the affected area and can grapple victims. A critical win doubles plant damage; the effect lasts until the end of the scene."
+        "level": 1
       },
       "Eden's Bounty": {
-        "level": 5,
-        "ingredients": "A dead body, a living tree, one fresh apple, and one rotten apple.",
-        "process": "Place the body at the tree, healthy apple in its mouth and rotten apple in the caster's mouth; the body merges with the tree as nearby mortal blood is drawn through the earth.",
-        "system": "On a win, Hunger is reduced to 1; on a critical win, to 0 without killing. On a total failure, Hunger Frenzy occurs. Nearby kine suffer lasting physical penalties and Health damage."
+        "level": 5
       },
       "Dampen the Fear": {
-        "level": 1,
-        "ingredients": "A holy object such as a crucifix, Bible, or Qur'an.",
-        "process": "Expose the holy symbol to fire before interacting with fire.",
-        "system": "+2 dice to resist Rötschreck; critical success removes Terror Frenzy rolls. Lasts for the scene."
+        "level": 1
       },
       "Fire in the Blood": {
         "level": 3,
-        "ingredients": "Target's blood sample, visual depiction, and red candle or iron lighter.",
-        "process": "Burn the target's blood while concentrating on their image.",
-        "system": "Contest against Resolve + Occult or Resolve + Fortitude. Margin inflicts Superficial Health damage and a Physical penalty; critical increases the penalty. Kindred targets must make a Rouse Check."
+        "dice_pools": [
+          "Resolve + Occult",
+          "Resolve + Fortitude"
+        ]
       },
       "Creatio Ignis": {
-        "level": 5,
-        "ingredients": "Enough vampire vitae to coat the caster's arms to the elbows and a flame source.",
-        "process": "Immerse arms in vitae and ignite the vitae coating.",
-        "system": "The caster's arms burn without harming the caster's arms and can inflict Aggravated damage on touched targets. Nearby vampires must test Terror Frenzy."
+        "level": 5
       },
       "Traveler's Call": {
         "level": 1,
-        "ingredients": "The Shalimite black book.",
-        "process": "Invoke the Ceremony while holding the book and focusing on another Shalimite's name.",
-        "system": "On a successful Ceremony roll the target receives a flashing vision of the caller's surroundings and suffers a -2 concentration penalty for the scene. A critical win permits a one-word message.",
         "prerequisite_power": "Oblivion's Sight"
       },
       "Name of the Father": {
         "level": 3,
-        "ingredients": "Ability to speak ancient Greek, eye contact with the victim, and five charcoal sticks.",
-        "process": "Recite an ancient Greek invocation while crushing charcoal and maintaining eye contact.",
-        "system": "On a successful contest against Resolve + Composure, the victim is paralyzed by despair for a number of turns equal to the margin. Willpower can be spent to break free.",
+        "dice_pools": [
+          "Resolve + Composure"
+        ],
         "prerequisite_power": "Shadow Perspective"
       },
       "Pit of Contemplation": {
         "level": 5,
-        "ingredients": "A pot of ink, three pints/six liters or more of blood from an innocent murdered by the caster, and an unlit room.",
-        "process": "Paint a doorway on a wall with the victim's blood, then splash ink across it and open a tear into Oblivion.",
-        "system": "A successful Ceremony creates a hole that draws air, objects, and people into a pocket of Oblivion. Mortals are killed instantly; undead remain trapped until released.",
         "prerequisite_power": "Tenebrous Avatar"
       }
     },
     "Sabbat: Black Hand": {
       "Odbiest": {
-        "level": 1,
-        "ingredients": "Vinegar or alcohol.",
-        "process": "Sprinkle the substance over the ground and circle the area counterclockwise while focusing on the perimeter.",
-        "system": "On success, animals, vermin, and similar low-intelligence life flee an area of roughly 100 square meters. Lasts one scene or one night."
+        "level": 1
       },
       "Wspólny Wigor": {
-        "level": 3,
-        "ingredients": "A claw/fingernail from the Pack Priest.",
-        "process": "The priest breaks the nail into pieces, places theirs in the Vaulderie cup, and the pack members place pieces under their tongues.",
-        "system": "On success, the pack's Blood Potency rises to the priest's Blood Potency and the priest gains +3 dice to Dominate or Presence tests against pack members for one night."
+        "level": 3
       },
       "Galwaniczne Spustoszenie": {
-        "level": 3,
-        "ingredients": "A copper coin.",
-        "process": "Spread Blood over the coin and stomp on it.",
-        "system": "Disrupts electrical systems in an area roughly equivalent to a large warehouse or three-story building. Critical success keeps the failure relatively discreet; otherwise fires and alarms may result."
+        "level": 3
       },
       "Brama-Symulakrum": {
-        "level": 5,
-        "ingredients": "Materials to construct an exact copy of the destination and sacrificial victims.",
-        "process": "Build and blood-consecrate a physical replica of the destination over an extended preparation period.",
-        "system": "Creates a portal allowing a designated number of vampires to travel between the two locations. The portal remains open until the stated number of travelers has crossed."
+        "level": 5
       }
     }
   }

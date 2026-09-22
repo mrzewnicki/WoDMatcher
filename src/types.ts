@@ -29,9 +29,6 @@ export type PowerEntry = {
   cost?: string
   duration?: string
   amalgam?: string
-  system?: string
-  ingredients?: string
-  process?: string
   prerequisite?: string
   rawPools: string[]
   terms: DiceTerm[]

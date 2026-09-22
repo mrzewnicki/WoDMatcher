@@ -24,10 +24,8 @@ type RitualIndexEntry = {
 
 type RitualDetail = {
   level?: number
-  ingredients?: string
-  process?: string
-  system?: string
   prerequisite?: string
+  dice_pools?: string[]
 }
 
 type RitualsPayload = {
@@ -37,9 +35,8 @@ type RitualsPayload = {
 
 type CoreRitualPower = {
   name?: string
-  ingredients?: string
-  process?: string
-  system?: string
+  dice_pools?: string[]
+  prerequisite?: string
 }
 
 type CoreDisciplines = {
@@ -53,16 +50,6 @@ const DEFAULT_POOLS: Record<string, string> = {
   'Blood Sorcery': 'Intelligence + Blood Sorcery',
   Oblivion: 'Resolve + Oblivion',
 }
-
-const ATTR =
-  'Strength|Dexterity|Stamina|Charisma|Manipulation|Composure|Intelligence|Wits|Resolve'
-
-/** Trait words stop before vs/or/and and similar prose connectors. */
-const TRAIT = `[A-Za-z][A-Za-z'-]*(?:\\s+(?!vs\\b|or\\b|and\\b|test\\b|roll\\b|the\\b|against\\b|with\\b|for\\b|on\\b|to\\b|of\\b)[A-Za-z][A-Za-z'-]*){0,3}`
-
-const SIDE = `(?:${ATTR})(?:\\s+or\\s+(?:${ATTR}))?\\s*\\+\\s*${TRAIT}`
-
-const POOL_IN_TEXT = new RegExp(`\\b${SIDE}(?:\\s+vs\\s+${SIDE})?`, 'gi')
 
 function slug(name: string): string {
   return name
@@ -114,9 +101,8 @@ function buildCorebookLookup(
     for (const power of Object.values(levelPowers)) {
       if (!power.name) continue
       map.set(power.name, {
-        ingredients: power.ingredients,
-        process: power.process,
-        system: power.system,
+        dice_pools: power.dice_pools,
+        prerequisite: power.prerequisite,
       })
     }
   }
@@ -125,26 +111,25 @@ function buildCorebookLookup(
 
 function poolsForRitual(
   discipline: string,
-  system?: string,
+  detailPools?: string[],
 ): { rawPools: string[]; terms: PowerEntry['terms'] } {
   const defaultPool = DEFAULT_POOLS[discipline]
   const rawPools: string[] = defaultPool ? [defaultPool] : []
   const terms = defaultPool ? [...parsePoolString(defaultPool)] : []
 
-  if (system) {
-    for (const match of system.matchAll(POOL_IN_TEXT)) {
-      const cleaned = match[0].replace(/\s+/g, ' ').trim()
-      const parsed = parsePoolString(cleaned)
-      if (parsed.length === 0) continue
-      if (!rawPools.includes(cleaned)) rawPools.push(cleaned)
-      for (const term of parsed) {
-        if (
-          !terms.some(
-            (t) => t.attribute === term.attribute && t.trait === term.trait,
-          )
-        ) {
-          terms.push(term)
-        }
+  for (const pool of detailPools ?? []) {
+    const cleaned = pool.replace(/\s+/g, ' ').trim()
+    if (!cleaned) continue
+    const parsed = parsePoolString(cleaned)
+    if (parsed.length === 0) continue
+    if (!rawPools.includes(cleaned)) rawPools.push(cleaned)
+    for (const term of parsed) {
+      if (
+        !terms.some(
+          (t) => t.attribute === term.attribute && t.trait === term.trait,
+        )
+      ) {
+        terms.push(term)
       }
     }
   }
@@ -172,7 +157,7 @@ export function flattenRituals(
     }
 
     const discipline = normalizeDiscipline(entry.discipline, entry.type)
-    const { rawPools, terms } = poolsForRitual(discipline, detail?.system)
+    const { rawPools, terms } = poolsForRitual(discipline, detail?.dice_pools)
     if (terms.length === 0) continue
 
     const kind =
@@ -186,9 +171,6 @@ export function flattenRituals(
       book: resolveBook(entry.sourcebook),
       page: entry.page_range,
       kind,
-      system: detail?.system,
-      ingredients: detail?.ingredients,
-      process: detail?.process,
       prerequisite: detail?.prerequisite,
       rawPools,
       terms,
