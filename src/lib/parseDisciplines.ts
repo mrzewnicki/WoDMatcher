@@ -83,6 +83,7 @@ type RawPower = {
 }
 
 type RawDiscipline = {
+  book?: string
   levels?: Record<string, Record<string, RawPower>>
 }
 
@@ -155,6 +156,7 @@ export function flattenPowers(
           discipline,
           level,
           name: power.name ?? powerKey,
+          book: body.book,
           cost: power.cost,
           duration: power.duration,
           amalgam: power.amalgam,

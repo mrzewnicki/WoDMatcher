@@ -11,7 +11,10 @@ import { matchPowers } from './lib/matchPowers'
 import './App.css'
 
 type ClanMap = {
-  clans: Record<string, { disciplines: string[]; special_rule?: string }>
+  clans: Record<
+    string,
+    { book?: string; disciplines: string[]; special_rule?: string }
+  >
 }
 
 const powers = flattenPowers(disciplinesData as Parameters<typeof flattenPowers>[0])

@@ -1,0 +1,64 @@
+{
+  "books": {
+    "Vampire,_The_Masquerade_V5_Corebook_Extended": {
+      "name": "Vampire: The Masquerade V5 Corebook Extended",
+      "short_name": "V5 Corebook Extended",
+      "file_path": "R:\\Podręczniki\\Wampir\\Vampire,_The_Masquerade_V5_Corebook_Extended.pdf"
+    },
+    "camarilla": {
+      "name": "Camarilla",
+      "short_name": "Camarilla",
+      "year": 2018
+    },
+    "anarch": {
+      "name": "Anarch",
+      "short_name": "Anarch",
+      "year": 2018
+    },
+    "chicago-by-night": {
+      "name": "Chicago by Night",
+      "short_name": "Chicago by Night",
+      "year": 2019
+    },
+    "companion": {
+      "name": "Vampire: The Masquerade Companion",
+      "short_name": "Companion",
+      "year": 2020
+    },
+    "cults-of-the-blood-gods": {
+      "name": "Cults of the Blood Gods",
+      "short_name": "Cults of the Blood Gods",
+      "year": 2021
+    },
+    "sabbat": {
+      "name": "Sabbat: The Black Hand",
+      "short_name": "Sabbat",
+      "year": 2021
+    },
+    "trails-of-ash-and-bone": {
+      "name": "Trails of Ash and Bone",
+      "short_name": "Trails of Ash and Bone",
+      "year": 2022
+    },
+    "blood-sigils": {
+      "name": "Blood Sigils",
+      "short_name": "Blood Sigils",
+      "year": 2023
+    },
+    "players-guide": {
+      "name": "Player's Guide",
+      "short_name": "Player's Guide",
+      "year": 2023
+    },
+    "gehenna-war": {
+      "name": "Gehenna War",
+      "short_name": "Gehenna War",
+      "year": 2024
+    },
+    "tattered-facade": {
+      "name": "Tattered Facade",
+      "short_name": "Tattered Facade",
+      "year": 2024
+    }
+  }
+}

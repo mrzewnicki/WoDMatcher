@@ -1,6 +1,7 @@
 {
   "clans": {
     "Brujah": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Celerity",
         "Potence",
@@ -8,6 +9,7 @@
       ]
     },
     "Gangrel": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Animalism",
         "Fortitude",
@@ -15,6 +17,7 @@
       ]
     },
     "Malkavian": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Auspex",
         "Dominate",
@@ -22,6 +25,7 @@
       ]
     },
     "Nosferatu": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Animalism",
         "Obfuscate",
@@ -29,6 +33,7 @@
       ]
     },
     "Toreador": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Auspex",
         "Celerity",
@@ -36,6 +41,7 @@
       ]
     },
     "Tremere": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Auspex",
         "Dominate",
@@ -43,6 +49,7 @@
       ]
     },
     "Ventrue": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Dominate",
         "Fortitude",
@@ -50,10 +57,12 @@
       ]
     },
     "Caitiff": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [],
       "special_rule": "Three Disciplines of the player's choice following the Embrace. These are not considered in-clan for experience cost purposes."
     },
     "Thin-Blooded": {
+      "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Thin-Blood Alchemy"
       ]

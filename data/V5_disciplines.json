@@ -1,5 +1,6 @@
 {
   "General Rules": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "learning_disciplines": "Disciplines are rated from one to five dots. A character gains dots at character creation or by spending experience. Usually, learning a Discipline requires feeding on the matching Blood Resonance. Learning a completely new non-Clan Discipline also requires tasting the Blood of someone who possesses it.",
     "selecting_powers": "Whenever a character gains a dot in a Discipline, they choose one power from the listed powers at their new level or below. Characters normally have as many powers as dots in a Discipline.",
     "using_powers": "Unless otherwise stated, a Discipline can be activated at any time and requires little overt action. Powers normally respond to actions rather than activating retroactively. A vampire can activate one Discipline power per turn, while any number of powers can remain active simultaneously.",
@@ -7,6 +8,7 @@
     "amalgam_powers": "Some powers require proficiency in more than one Discipline. The character must possess the listed number of dots in the other Discipline as well. For classification purposes, these powers count as belonging to both Disciplines."
   },
   "Animalism": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "bond_famulus": {
@@ -97,6 +99,7 @@
     }
   },
   "Celerity": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "cats_grace": {
@@ -172,6 +175,7 @@
     }
   },
   "Dominate": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "cloud_memory": {
@@ -256,6 +260,7 @@
     }
   },
   "Fortitude": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "resilience": {
@@ -331,6 +336,7 @@
     }
   },
   "Obfuscate": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "cloak_of_shadows": {
@@ -411,6 +417,7 @@
     }
   },
   "Potence": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "lethal_body": {
@@ -483,6 +490,7 @@
     }
   },
   "Presence": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "awe": {
@@ -567,6 +575,7 @@
     }
   },
   "Protean": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "eyes_of_the_beast": {
@@ -633,6 +642,7 @@
     }
   },
   "Blood Sorcery": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "corrosive_vitae": {
@@ -716,6 +726,7 @@
     }
   },
   "Rituals": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "general_rules": {
       "default_cost": "One Rouse Check unless otherwise noted",
       "casting_time": "Five minutes per Ritual level",
@@ -890,6 +901,7 @@
     }
   },
   "Thin-Blood Alchemy": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "general_rules": {
       "requirements": "All formulae require vitae from the Alchemist and human blood of the correct Resonance.",
       "power_level": "“Power level” refers to the level of Thin-Blood Alchemy involved, not the level of the Discipline power being counterfeited.",
@@ -975,6 +987,7 @@
     }
   },
   "Auspex": {
+    "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
     "levels": {
       "1": {
         "heightened_senses": {
