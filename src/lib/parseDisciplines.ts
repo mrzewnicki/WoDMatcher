@@ -63,6 +63,7 @@ const DISCIPLINES = new Set([
 
 /** Map sourcebook display names → V5_books.json ids. */
 const BOOK_NAME_TO_ID: Record<string, string> = {
+  Corebook: 'Vampire,_The_Masquerade_V5_Corebook_Extended',
   "Player's Guide": 'players-guide',
   'Cults of the Blood Gods': 'cults-of-the-blood-gods',
   'Sabbat: Czarna Ręka': 'sabbat',
