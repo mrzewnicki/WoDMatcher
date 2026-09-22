@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "book_id": "camarilla",
+    "book_name": "Camarilla",
+    "source_file": "R:\\Podręczniki\\Wampir\\Vampire The Masquerade V5 - Camarilla - PDF Room.pdf",
+    "extraction_status": "pending",
+    "content_type": "clans"
+  },
+  "clans": {
+    "Banu Haqim": {
+      "_note": "Pages 158-168, including disciplines (167) and rituals (168)"
+    }
+  }
+}

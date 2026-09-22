@@ -1,4 +1,5 @@
 import type { MatchResult, PowerKind } from '../types'
+import { bookLabel } from './formatSource'
 
 export type EntryTypeFilter = PowerKind
 
@@ -6,6 +7,7 @@ export type ExtraFilters = {
   levels: number[]
   types: EntryTypeFilter[]
   nameQuery: string
+  book: string
 }
 
 export function normalizeSearch(value: string): string {
@@ -22,7 +24,7 @@ export function applyExtraFilters(
   results: MatchResult[],
   filters: ExtraFilters,
 ): MatchResult[] {
-  const { levels, types, nameQuery } = filters
+  const { levels, types, nameQuery, book } = filters
   const q = normalizeSearch(nameQuery.trim())
   const levelSet = levels.length > 0 ? new Set(levels) : null
   const typeSet = types.length > 0 ? new Set(types) : null
@@ -31,6 +33,7 @@ export function applyExtraFilters(
     if (levelSet && !levelSet.has(result.power.level)) return false
     if (typeSet && !typeSet.has(entryTypeOf(result))) return false
     if (q && !normalizeSearch(result.power.name).includes(q)) return false
+    if (book && bookLabel(result.power.book) !== book) return false
     return true
   })
 }

@@ -59,12 +59,69 @@
     "Caitiff": {
       "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [],
-      "special_rule": "Three Disciplines of the player's choice following the Embrace. These are not considered in-clan for experience cost purposes."
+      "special_rule": "Three Disciplines of the player's choice following the Embrace; they are not considered in-clan for Experience cost purposes."
     },
     "Thin-Blooded": {
       "book": "Vampire,_The_Masquerade_V5_Corebook_Extended",
       "disciplines": [
         "Thin-Blood Alchemy"
+      ],
+      "special_rule": "Thin-Blood Alchemy is the listed Discipline; thin-bloods can temporarily access other Disciplines through feeding and resonance rules."
+    },
+    "Banu Haqim": {
+      "book": "players-guide",
+      "disciplines": [
+        "Blood Sorcery",
+        "Celerity",
+        "Obfuscate"
+      ]
+    },
+    "Hecata": {
+      "book": "players-guide",
+      "disciplines": [
+        "Auspex",
+        "Fortitude",
+        "Oblivion"
+      ]
+    },
+    "Lasombra": {
+      "book": "chicago-by-night",
+      "disciplines": [
+        "Dominate",
+        "Oblivion",
+        "Potence"
+      ]
+    },
+    "Ministry": {
+      "book": "players-guide",
+      "disciplines": [
+        "Obfuscate",
+        "Presence",
+        "Protean"
+      ]
+    },
+    "Ravnos": {
+      "book": "players-guide",
+      "disciplines": [
+        "Animalism",
+        "Obfuscate",
+        "Presence"
+      ]
+    },
+    "Salubri": {
+      "book": "players-guide",
+      "disciplines": [
+        "Auspex",
+        "Fortitude",
+        "Obfuscate"
+      ]
+    },
+    "Tzimisce": {
+      "book": "players-guide",
+      "disciplines": [
+        "Animalism",
+        "Dominate",
+        "Protean"
       ]
     }
   }

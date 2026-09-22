@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "book_id": "players-guide",
+    "book_name": "Player's Guide",
+    "source_file": "R:\\Podręczniki\\Wampir\\647035821-v5-Players-Guide-Digital-low-res-v2.pdf",
+    "type": "reference_map",
+    "priority": "HIGH",
+    "note": "OBLIVION is a NEW discipline - must be fully extracted"
+  },
+  "oblivion_discipline": {
+    "_section": "Oblivion",
+    "_page": 84,
+    "_note": "NEW DISCIPLINE - full extraction required",
+    "_structure": "Same as other disciplines in V5_disciplines.json",
+    "levels": {
+      "1": { "_note": "Extract all Level 1 powers from page 84+" },
+      "2": { "_note": "Extract all Level 2 powers" },
+      "3": { "_note": "Extract all Level 3 powers" },
+      "4": { "_note": "Extract all Level 4 powers" },
+      "5": { "_note": "Extract all Level 5 powers" }
+    }
+  },
+  "oblivion_ceremonies": {
+    "_section": "Oblivion Ceremonies",
+    "_pages": "91-97",
+    "_note": "Similar to Blood Sorcery Rituals but for Oblivion discipline. May have different structure."
+  },
+  "extraction_priority": {
+    "1": "Oblivion discipline powers (pages 84-90)",
+    "2": "Oblivion Ceremonies (pages 91-97)",
+    "note": "This is CRITICAL for Lasombra and Hecata clans"
+  }
+}

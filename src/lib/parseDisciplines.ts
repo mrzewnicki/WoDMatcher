@@ -89,6 +89,7 @@ function classifyTrait(trait: string): keyof TraitGroups {
 type RawSource = {
   book?: string
   page?: number
+  page_range?: string
 }
 
 type RawPower = {
@@ -210,6 +211,15 @@ function resolveBook(power: RawPower, disciplineBook?: string): string | undefin
   return disciplineBook
 }
 
+function resolvePage(power: RawPower): number | string | undefined {
+  const fromSources = power.sources?.find(
+    (s) => s.page != null || s.page_range,
+  )
+  if (fromSources?.page != null) return fromSources.page
+  if (fromSources?.page_range) return fromSources.page_range
+  return undefined
+}
+
 export function flattenPowers(
   data: Record<string, RawDiscipline | unknown>,
 ): PowerEntry[] {
@@ -235,6 +245,7 @@ export function flattenPowers(
           level,
           name: power.name ?? powerKey,
           book: resolveBook(power, disc.book),
+          page: resolvePage(power),
           cost: power.cost,
           duration: power.duration,
           amalgam: power.amalgam,

@@ -1,0 +1,163 @@
+{
+  "_meta": {
+    "description": "Mapa lokalizacji klanów, dyscyplin i rytuałów w podręcznikach V5",
+    "created": "2026-09-22",
+    "status": "analysis_phase"
+  },
+  "sourcebooks": {
+    "Vampire,_The_Masquerade_V5_Corebook_Extended": {
+      "file_path": "R:\\Podręczniki\\Wampir\\Vampire,_The_Masquerade_V5_Corebook_Extended.pdf",
+      "book_id": "Vampire,_The_Masquerade_V5_Corebook_Extended",
+      "disciplines": {
+        "Animalism": { "page": 244 },
+        "Auspex": { "page": 248 },
+        "Celerity": { "page": 252 },
+        "Dominate": { "page": 254 },
+        "Fortitude": { "page": 258 },
+        "Obfuscate": { "page": 260 },
+        "Potence": { "page": 263 },
+        "Presence": { "page": 266 },
+        "Protean": { "page": 269 },
+        "Blood Sorcery": { "page": 271 }
+      },
+      "rituals": {
+        "Blood Sorcery Rituals": { "page": 274 }
+      },
+      "alchemy": {
+        "Thin-Blood Alchemy": { "page": 282 }
+      },
+      "clans": {
+        "_note": "Clans already extracted, only updating page references"
+      }
+    },
+    "chicago-by-night": {
+      "file_path": "R:\\Podręczniki\\Wampir\\Wampir Maskarada 5 Chicago by Night.pdf",
+      "book_id": "chicago-by-night",
+      "clans": {
+        "Banu Haqim": { "page": 80, "npcs": true },
+        "Brujah": { "page": 85, "npcs": true },
+        "Caitiff": { "page": 102, "npcs": true },
+        "Gangrel": { "page": 118, "npcs": true },
+        "Lasombra": { "page": 126, "npcs": true, "disciplines_page": 291 },
+        "Malkavian": { "page": 138, "npcs": true },
+        "Ministry": { "page": 149, "npcs": true },
+        "Nosferatu": { "page": 157, "npcs": true },
+        "Thin-Blooded": { "page": 175, "npcs": true },
+        "Toreador": { "page": 183, "npcs": true },
+        "Tremere": { "page": 200, "npcs": true },
+        "Ventrue": { "page": 209, "npcs": true }
+      },
+      "disciplines": {
+        "Lasombra": {
+          "chapter": 6,
+          "page": 289,
+          "disciplines_page": 291,
+          "oblivion_page": 292
+        }
+      }
+    },
+    "blood-sigils": {
+      "file_path": "R:\\Podręczniki\\Wampir\\pdfcoffee.com_blood-sigils-5-pdf-free.pdf",
+      "book_id": "blood-sigils",
+      "rituals": {
+        "New Blood Sorcery Rituals": { "page": 59 },
+        "Blood Sorcery Rituals": { "page": 99 }
+      },
+      "alchemy": {
+        "New Thin-Blood Alchemy Formulae": { "page": 73 }
+      },
+      "blood_craft_scene": {
+        "Tremere": { "page": 99 },
+        "Banu Haqim": { "page": 104 }
+      }
+    },
+    "camarilla": {
+      "file_path": "R:\\Podręczniki\\Wampir\\Vampire The Masquerade V5 - Camarilla - PDF Room.pdf",
+      "book_id": "camarilla",
+      "clans": {
+        "Ventrue": { "page": 128 },
+        "Toreador": { "page": 134 },
+        "Tremere": { "page": 140 },
+        "Malkavians": { "page": 146 },
+        "Nosferatu": { "page": 152 },
+        "Banu Haqim": {
+          "page": 158,
+          "disciplines_page": 167,
+          "rituals_page": 168
+        }
+      },
+      "anarch_clans": {
+        "Gangrel": { "page": 174 },
+        "Brujah": { "page": 176 }
+      }
+    },
+    "players-guide": {
+      "file_path": "R:\\Podręczniki\\Wampir\\647035821-v5-Players-Guide-Digital-low-res-v2.pdf",
+      "book_id": "players-guide",
+      "clans": {
+        "Banu Haqim": { "page": 17 },
+        "Hecata": { "page": 22 },
+        "Lasombra": { "page": 29 },
+        "Ministry": { "page": 35 },
+        "Ravnos": { "page": 41 },
+        "Salubri": { "page": 46 },
+        "Tzimisce": { "page": 52 }
+      },
+      "disciplines": {
+        "Animalism": { "page": 69 },
+        "Auspex": { "page": 70 },
+        "Celerity": { "page": 72 },
+        "Dominate": { "page": 73 },
+        "Fortitude": { "page": 74 },
+        "Obfuscate": { "page": 76 },
+        "Potence": { "page": 79 },
+        "Presence": { "page": 80 },
+        "Protean": { "page": 81 },
+        "Oblivion": { "page": 84 }
+      },
+      "rituals": {
+        "Oblivion Ceremonies": { "page": 91 },
+        "Blood Sorcery": { "page": 98 },
+        "Blood Sorcery Rituals": { "page": 99 }
+      },
+      "alchemy": {
+        "Thin-Blood Alchemy": { "page": 103 }
+      }
+    },
+    "sabbat": {
+      "file_path": "R:\\Podręczniki\\Wampir\\Wampir_Maskarada_5_Edycja_Sabat.PDF",
+      "book_id": "sabbat",
+      "language": "pl",
+      "disciplines": {
+        "Dary Kaina: Dyscypliny": { "page": 46 },
+        "Magia Krwi": { "page": 49 }
+      },
+      "rituals": {
+        "Ceremoniały": { "page": 52 }
+      },
+      "alchemy": {
+        "Alchemia Słabej Krwi": { "page": 53 }
+      }
+    },
+    "anarch": {
+      "file_path": "R:\\Podręczniki\\Wampir\\Wampir_Maskarada_5_Edycja_-_Anarchisci.pdf",
+      "book_id": "anarch",
+      "language": "pl",
+      "clans": {
+        "Brujah": { "page": 140 },
+        "Gangreli": { "page": 148 }
+      }
+    }
+  },
+  "extraction_plan": {
+    "phase_1_current": "Analysis of table of contents - COMPLETED",
+    "phase_2_next": "Create file structure for extracted data per sourcebook",
+    "phase_3_future": "Extract data from each sourcebook systematically",
+    "notes": [
+      "Disciplines already in V5_disciplines.json should only get page number updates",
+      "New clans need full extraction",
+      "New rituals and alchemy formulae need full extraction",
+      "Check for duplicate content across sourcebooks"
+    ]
+  }
+}

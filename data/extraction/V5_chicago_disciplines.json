@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "book_id": "chicago-by-night",
+    "book_name": "Chicago by Night",
+    "source_file": "R:\\Podręczniki\\Wampir\\Wampir Maskarada 5 Chicago by Night.pdf",
+    "extraction_status": "pending",
+    "content_type": "disciplines"
+  },
+  "disciplines": {
+    "Oblivion": {
+      "_note": "New discipline, page 292+, Lasombra clan discipline"
+    }
+  }
+}

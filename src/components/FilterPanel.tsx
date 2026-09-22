@@ -26,6 +26,9 @@ type Props = {
   onTypesChange: (types: EntryTypeFilter[]) => void
   nameQuery: string
   onNameQueryChange: (value: string) => void
+  book: string
+  onBookChange: (value: string) => void
+  bookNames: string[]
   hasFilters: boolean
   onClear: () => void
 }
@@ -55,6 +58,9 @@ export function FilterPanel({
   onTypesChange,
   nameQuery,
   onNameQueryChange,
+  book,
+  onBookChange,
+  bookNames,
   hasFilters,
   onClear,
 }: Props) {
@@ -176,6 +182,19 @@ export function FilterPanel({
             )
           })}
         </div>
+      </section>
+
+      <section className="filter-section" aria-label="Podręcznik">
+        <label className="field">
+          <span>Podręcznik</span>
+          <AutocompleteSelect
+            value={book}
+            onChange={onBookChange}
+            options={bookNames}
+            emptyLabel="— dowolny —"
+            aria-label="Podręcznik"
+          />
+        </label>
       </section>
     </aside>
   )

@@ -523,6 +523,8 @@
 }
 
 .power-card {
+  display: flex;
+  flex-direction: column;
   padding: 1rem 1.05rem 1.1rem;
   background: color-mix(in srgb, var(--bg-panel) 96%, black);
   border: 1px solid var(--line-soft);
@@ -640,11 +642,58 @@
 }
 
 .power-card__pool,
-.power-card__clans,
 .power-card__detail {
   margin: 0.35rem 0 0;
   font-size: 0.92rem;
   line-height: 1.35;
+}
+
+.power-card__clip {
+  margin-top: 0.35rem;
+}
+
+.power-card__clip > .power-card__pool,
+.power-card__clip > .power-card__detail {
+  margin-top: 0;
+}
+
+.power-card__clip--fade > .power-card__pool,
+.power-card__clip--fade > .power-card__detail {
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 42%,
+    rgb(0 0 0 / 0.55) 72%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 42%,
+    rgb(0 0 0 / 0.55) 72%,
+    transparent 100%
+  );
+}
+
+.power-card__read-more {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+  color: color-mix(in srgb, var(--ink-muted) 75%, var(--accent-soft, #a8873a));
+}
+
+.power-card__source {
+  margin: auto 0 0;
+  padding-top: 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: var(--ink-muted);
+}
+
+.power-card__source-page {
+  color: color-mix(in srgb, var(--ink-muted) 70%, var(--ink));
 }
 
 .label {

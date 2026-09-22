@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "book_id": "anarch",
+    "book_name": "Anarch",
+    "source_file": "R:\\Podręczniki\\Wampir\\Wampir_Maskarada_5_Edycja_-_Anarchisci.pdf",
+    "extraction_status": "pending",
+    "content_type": "clans",
+    "language": "pl"
+  },
+  "clans": {
+    "Brujah": {
+      "_note": "Pages 140-147 - check for new discipline powers or variants"
+    },
+    "Gangreli": {
+      "_note": "Pages 148-151 - check for new discipline powers or variants"
+    }
+  }
+}

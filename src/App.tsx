@@ -21,6 +21,7 @@ import {
   type EntryTypeFilter,
 } from './lib/filterResults'
 import { groupResults, type GroupByMode } from './lib/groupResults'
+import { collectBookOptions } from './lib/formatSource'
 import './App.css'
 
 type ClanMap = {
@@ -41,22 +42,11 @@ const powers = [
   ),
 ]
 const { attributes, traits } = collectTraitOptions(powers)
+const bookNames = collectBookOptions(powers)
 const typedClanData = clanData as ClanMap
-const clansByDiscipline = buildClanIndex(typedClanData)
 const clanNames = Object.keys(typedClanData.clans).sort((a, b) =>
   a.localeCompare(b),
 )
-
-function buildClanIndex(data: ClanMap): Record<string, string[]> {
-  const index: Record<string, string[]> = {}
-  for (const [clan, info] of Object.entries(data.clans)) {
-    for (const disc of info.disciplines) {
-      if (!index[disc]) index[disc] = []
-      index[disc].push(clan)
-    }
-  }
-  return index
-}
 
 function filterByClan(
   results: ReturnType<typeof matchPowers>,
@@ -77,6 +67,7 @@ export default function App() {
   const [levels, setLevels] = useState<number[]>([])
   const [types, setTypes] = useState<EntryTypeFilter[]>([])
   const [nameQuery, setNameQuery] = useState('')
+  const [book, setBook] = useState('')
   const [groupBy, setGroupBy] = useState<GroupByMode>('discipline')
 
   const clanInfo = clan ? typedClanData.clans[clan] : null
@@ -93,8 +84,8 @@ export default function App() {
   const matches = useMemo(() => {
     const raw = matchPowers(powers, attribute || null, trait || null)
     const byClan = filterByClan(raw, clan)
-    return applyExtraFilters(byClan, { levels, types, nameQuery })
-  }, [attribute, trait, clan, levels, types, nameQuery])
+    return applyExtraFilters(byClan, { levels, types, nameQuery, book })
+  }, [attribute, trait, clan, levels, types, nameQuery, book])
 
   const sections = useMemo(
     () => groupResults(matches, groupBy),
@@ -108,6 +99,7 @@ export default function App() {
     attribute ||
       trait ||
       clan ||
+      book ||
       levels.length > 0 ||
       types.length > 0 ||
       nameQuery.trim(),
@@ -134,6 +126,7 @@ export default function App() {
     setLevels([])
     setTypes([])
     setNameQuery('')
+    setBook('')
   }
 
   const chips = useMemo((): FilterChip[] => {
@@ -180,14 +173,22 @@ export default function App() {
         onRemove: () => setNameQuery(''),
       })
     }
+    if (book) {
+      list.push({
+        id: 'book',
+        label: `Podręcznik: ${book}`,
+        onRemove: () => setBook(''),
+      })
+    }
     return list
-  }, [attribute, trait, clan, types, levels, nameQuery])
+  }, [attribute, trait, clan, types, levels, nameQuery, book])
 
   let summaryLine = ''
   if (attribute && trait) summaryLine += ` dla ${attribute} + ${trait}`
   else if (attribute) summaryLine += ` dla atrybutu ${attribute}`
   else if (trait) summaryLine += ` dla cechy ${trait}`
   if (clan) summaryLine += ` · klan ${clan}`
+  if (book) summaryLine += ` · ${book}`
 
   return (
     <div className="app">
@@ -214,6 +215,9 @@ export default function App() {
           onTypesChange={setTypes}
           nameQuery={nameQuery}
           onNameQueryChange={setNameQuery}
+          book={book}
+          onBookChange={setBook}
+          bookNames={bookNames}
           hasFilters={hasFilters}
           onClear={onClear}
         />
@@ -228,7 +232,6 @@ export default function App() {
             sections={sections}
             groupBy={groupBy}
             onGroupByChange={setGroupBy}
-            clansByDiscipline={clansByDiscipline}
             summaryLine={summaryLine}
           />
         </main>

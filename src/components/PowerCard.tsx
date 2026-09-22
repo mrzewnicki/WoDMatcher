@@ -1,8 +1,9 @@
 import type { MatchResult } from '../types'
+import { sourceParts } from '../lib/formatSource'
+import { truncateText } from '../lib/truncateText'
 
 type Props = {
   result: MatchResult
-  clans: string[]
 }
 
 function kindLabel(kind: MatchResult['power']['kind']): string | null {
@@ -11,10 +12,36 @@ function kindLabel(kind: MatchResult['power']['kind']): string | null {
   return null
 }
 
-export function PowerCard({ result, clans }: Props) {
+function DetailLine({
+  label,
+  value,
+  max,
+}: {
+  label: string
+  value: string
+  max?: number
+}) {
+  const { text, truncated } = truncateText(value, max)
+  return (
+    <div
+      className={`power-card__clip${truncated ? ' power-card__clip--fade' : ''}`}
+    >
+      <p className="power-card__detail">
+        <span className="label">{label}:</span> {text}
+      </p>
+      {truncated && (
+        <p className="power-card__read-more">Doczytaj w podręczniku</p>
+      )}
+    </div>
+  )
+}
+
+export function PowerCard({ result }: Props) {
   const { power, kind, matchedPool } = result
   const typeLabel = kindLabel(power.kind)
   const showMatchBadge = kind === 'full' || kind === 'partial'
+  const source = sourceParts(power.book, power.page)
+  const pool = truncateText(matchedPool, 160)
 
   return (
     <article
@@ -37,29 +64,31 @@ export function PowerCard({ result, clans }: Props) {
         </p>
       </header>
 
-      <p className="power-card__pool">
-        <span className="label">Pula:</span> {matchedPool}
-      </p>
+      <div
+        className={`power-card__clip${pool.truncated ? ' power-card__clip--fade' : ''}`}
+      >
+        <p className="power-card__pool">
+          <span className="label">Pula:</span> {pool.text}
+        </p>
+        {pool.truncated && (
+          <p className="power-card__read-more">Doczytaj w podręczniku</p>
+        )}
+      </div>
 
-      {clans.length > 0 && (
-        <p className="power-card__clans">
-          <span className="label">Klany:</span> {clans.join(', ')}
-        </p>
-      )}
-
-      {power.cost && (
-        <p className="power-card__detail">
-          <span className="label">Koszt:</span> {power.cost}
-        </p>
-      )}
-      {power.duration && (
-        <p className="power-card__detail">
-          <span className="label">Czas:</span> {power.duration}
-        </p>
-      )}
+      {power.cost && <DetailLine label="Koszt" value={power.cost} />}
+      {power.duration && <DetailLine label="Czas" value={power.duration} />}
       {power.ingredients && (
-        <p className="power-card__detail">
-          <span className="label">Składniki:</span> {power.ingredients}
+        <DetailLine label="Składniki" value={power.ingredients} />
+      )}
+      {power.process && <DetailLine label="Proces" value={power.process} />}
+
+      {source && (
+        <p className="power-card__source">
+          {source.label}
+          {source.label && source.page != null ? ' · ' : null}
+          {source.page != null ? (
+            <span className="power-card__source-page">s. {source.page}</span>
+          ) : null}
         </p>
       )}
     </article>

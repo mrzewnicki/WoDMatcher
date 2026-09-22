@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "book_id": "players-guide",
+    "book_name": "Player's Guide",
+    "source_file": "R:\\Podręczniki\\Wampir\\647035821-v5-Players-Guide-Digital-low-res-v2.pdf",
+    "extraction_status": "pending",
+    "content_type": "rituals_and_ceremonies"
+  },
+  "oblivion_ceremonies": {
+    "_note": "Pages 91-97 - NEW ceremony system for Oblivion discipline"
+  },
+  "blood_sorcery_rituals": {
+    "_note": "Pages 99-102 - check for new rituals beyond Corebook"
+  }
+}

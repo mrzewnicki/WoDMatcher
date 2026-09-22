@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "book_id": "sabbat",
+    "book_name": "Sabbat",
+    "source_file": "R:\\Podręczniki\\Wampir\\Wampir_Maskarada_5_Edycja_Sabat.PDF",
+    "extraction_status": "pending",
+    "content_type": "rituals_and_ceremonies",
+    "language": "pl"
+  },
+  "ceremoniały": {
+    "_note": "Pages 52-53 - Polish language, may need translation"
+  },
+  "magia_krwi": {
+    "_note": "Pages 49-52 - check for new Blood Sorcery rituals"
+  }
+}

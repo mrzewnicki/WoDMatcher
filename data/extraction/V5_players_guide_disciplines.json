@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "book_id": "players-guide",
+    "book_name": "Player's Guide",
+    "source_file": "R:\\Podręczniki\\Wampir\\647035821-v5-Players-Guide-Digital-low-res-v2.pdf",
+    "extraction_status": "pending",
+    "content_type": "disciplines"
+  },
+  "disciplines": {
+    "_note": "Check all disciplines (pages 69-103) for NEW powers not in Corebook",
+    "Animalism": { "page": 69 },
+    "Auspex": { "page": 70 },
+    "Celerity": { "page": 72 },
+    "Dominate": { "page": 73 },
+    "Fortitude": { "page": 74 },
+    "Obfuscate": { "page": 76 },
+    "Potence": { "page": 79 },
+    "Presence": { "page": 80 },
+    "Protean": { "page": 81 },
+    "Oblivion": { "page": 84, "_note": "NEW discipline with full powers" },
+    "Blood Sorcery": { "page": 98 },
+    "Thin-Blood Alchemy": { "page": 103 }
+  }
+}

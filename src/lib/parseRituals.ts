@@ -184,6 +184,7 @@ export function flattenRituals(
       level: entry.level,
       name: entry.name,
       book: resolveBook(entry.sourcebook),
+      page: entry.page_range,
       kind,
       system: detail?.system,
       ingredients: detail?.ingredients,

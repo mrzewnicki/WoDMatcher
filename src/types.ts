@@ -23,6 +23,8 @@ export type PowerEntry = {
   level: number
   name: string
   book?: BookId
+  /** Printed page number, or a range string (e.g. rituals "274-281"). */
+  page?: number | string
   kind?: PowerKind
   cost?: string
   duration?: string

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "book_id": "blood-sigils",
+    "book_name": "Blood Sigils",
+    "source_file": "R:\\Podręczniki\\Wampir\\pdfcoffee.com_blood-sigils-5-pdf-free.pdf",
+    "type": "reference_map",
+    "note": "This file contains REFERENCES ONLY - page numbers and structure. Full content extraction must be done manually respecting copyright."
+  },
+  "new_blood_sorcery_rituals": {
+    "_section": "New Blood Sorcery Rituals",
+    "_pages": "59-72",
+    "_note": "See page 59 in PDF for list of new ritual names and their levels. Extract manually: name, level, cost, system, ingredients, dice_pools"
+  },
+  "additional_rituals": {
+    "_section": "Blood Sorcery Rituals (additional)",
+    "_pages": "99-102",
+    "_note": "See page 99 in PDF for additional rituals. May overlap with Corebook - check for duplicates"
+  },
+  "extraction_instructions": {
+    "step_1": "Open PDF at page 59",
+    "step_2": "List all ritual names and levels",
+    "step_3": "For each ritual, manually extract: cost, system, ingredients, duration",
+    "step_4": "Check against V5_disciplines.json Rituals section for duplicates",
+    "step_5": "Add only NEW rituals not in Corebook"
+  }
+}

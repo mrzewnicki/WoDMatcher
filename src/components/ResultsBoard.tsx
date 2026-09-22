@@ -12,17 +12,14 @@ type Props = {
   sections: ResultSection[]
   groupBy: GroupByMode
   onGroupByChange: (mode: GroupByMode) => void
-  clansByDiscipline: Record<string, string[]>
   summaryLine: string
 }
 
 function SectionBlock({
   section,
-  clansByDiscipline,
   depth = 0,
 }: {
   section: ResultSection
-  clansByDiscipline: Record<string, string[]>
   depth?: number
 }) {
   const Heading = depth === 0 ? 'h2' : 'h3'
@@ -43,7 +40,6 @@ function SectionBlock({
         <SectionBlock
           key={sub.id}
           section={sub}
-          clansByDiscipline={clansByDiscipline}
           depth={depth + 1}
         />
       ))}
@@ -51,11 +47,7 @@ function SectionBlock({
       {section.results && section.results.length > 0 && (
         <div className="results__grid">
           {section.results.map((r) => (
-            <PowerCard
-              key={r.power.id}
-              result={r}
-              clans={clansByDiscipline[r.power.discipline] ?? []}
-            />
+            <PowerCard key={r.power.id} result={r} />
           ))}
         </div>
       )}
@@ -71,7 +63,6 @@ export function ResultsBoard({
   sections,
   groupBy,
   onGroupByChange,
-  clansByDiscipline,
   summaryLine,
 }: Props) {
   const bodyRef = useRef<HTMLDivElement>(null)
@@ -136,11 +127,7 @@ export function ResultsBoard({
           <p className="hint">Brak mocy spełniających filtry.</p>
         ) : (
           displayed.sections.map((section) => (
-            <SectionBlock
-              key={section.id}
-              section={section}
-              clansByDiscipline={clansByDiscipline}
-            />
+            <SectionBlock key={section.id} section={section} />
           ))
         )}
       </div>

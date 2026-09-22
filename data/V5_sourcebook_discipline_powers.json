@@ -1,0 +1,1211 @@
+{
+  "_meta": {
+    "description": "Vampire: The Masquerade V5 — sourcebookowe moce Dyscyplin wyciągnięte z załączonych podręczników. Moce podstawowe z Corebooka nie są tutaj ponownie duplikowane, chyba że dane źródło dostarcza własną wersję lub ten sam power występuje w kilku sourcebookach.",
+    "format": "discipline -> levels -> power",
+    "sources": [
+      "Vampire: The Masquerade V5 — Player's Guide",
+      "Vampire: The Masquerade V5 — Cults of the Blood Gods",
+      "Vampire: The Masquerade V5 — Sabbat: Czarna Ręka",
+      "Vampire: The Masquerade V5 — Anarchiści",
+      "Vampire: The Masquerade V5 — Chicago by Night"
+    ]
+  },
+  "Animalism": {
+    "levels": {
+      "2": {
+        "animal_messenger": {
+          "name": "Animal Messenger",
+          "cost": "One Rouse Check for each night",
+          "dice_pools": [
+            "Resolve + Streetwise / Survival (Famulus, when recipient location is unknown)"
+          ],
+          "system": "The vampire whispers a one-sentence message to their Famulus and names the recipient. If the recipient's location is unknown, the Famulus tracks them. The message is delivered when the Famulus makes eye contact with the target, after which it returns to its master.",
+          "duration": "One or more nights, depending on the length of the search",
+          "prerequisite": "Bond Famulus",
+          "amalgam": "Auspex 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 69
+            }
+          ]
+        }
+      },
+      "3": {
+        "messengers_command": {
+          "name": "Messenger's Command",
+          "cost": "None",
+          "dice_pools": [
+            "See Compel or Mesmerize; Dominate rating cannot exceed Animalism"
+          ],
+          "system": "The vampire can use Compel or Mesmerize through a command carried by their Famulus. The normal Dominate test is made when the Famulus makes eye contact with the target.",
+          "duration": "See Animal Messenger",
+          "prerequisite": "Animal Messenger + either Compel or Mesmerize",
+          "amalgam": "Dominate 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 69
+            }
+          ]
+        },
+        "plague_of_beasts": {
+          "name": "Plague of Beasts",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Animalism vs Composure + Animal Ken"
+          ],
+          "system": "Choose a visible target. On a win, local animals harass the target for the rest of the night, imposing a Skill-pool penalty equal to the margin and making the target easier to track by the same amount. The penalty does not apply to physical conflicts.",
+          "duration": "One night",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 69
+            }
+          ]
+        }
+      },
+      "4": {
+        "sway_the_flock": {
+          "name": "Sway the Flock",
+          "cost": "One or more Rouse Checks",
+          "dice_pools": [
+            "Composure + Animalism"
+          ],
+          "system": "The vampire chooses a general behavior for animals in the area, from indifference to indiscriminate aggression. The number of successes determines the strength of the effect and increases the Difficulty of mundane attempts to control the animals by the same amount. The normal area is approximately a football field and can be expanded with additional Rouse Checks, up to a small town.",
+          "duration": "One night",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 70
+            }
+          ]
+        }
+      },
+      "5": {
+        "coax_the_bestial_temper": {
+          "name": "Coax the Bestial Temper",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Animalism"
+          ],
+          "system": "While humming, singing, or making a similar subtle sound, the vampire raises or lowers the Difficulty to resist Frenzy for all other vampires within earshot by one per success in the margin. If the Difficulty is lowered, vampires already in Frenzy may retest.",
+          "duration": "As long as the user keeps humming",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 70
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Auspex": {
+    "levels": {
+      "2": {
+        "panacea": {
+          "name": "Panacea",
+          "cost": "One Rouse Check + additional Willpower depending on circumstances",
+          "dice_pools": [
+            "Composure + Auspex"
+          ],
+          "system": "Roll against Difficulty 2. Restore superficial Willpower damage equal to the margin, or one Aggravated Willpower damage level for every three successes in the margin. On a mortal, the power calms emotional turmoil. Using it takes one turn; spending a whole scene reduces the Difficulty to 0. It must target someone other than the user, and a subject can only benefit once per night.",
+          "duration": "N/A",
+          "amalgam": "Fortitude 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 70
+            }
+          ]
+        },
+        "reveal_temperament": {
+          "name": "Reveal Temperament",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Intelligence + Auspex vs Composure + Subterfuge"
+          ],
+          "system": "A win reveals a mortal's Resonance and relevant Dyscrasias. A critical win grants a two-dice bonus to interaction with that mortal for the scene. Against a vampire, a win reveals the Resonance of their last mortal victim; a critical win also reveals the method of feeding and Predator Type.",
+          "duration": "One scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 70
+            }
+          ]
+        }
+      },
+      "3": {
+        "fatal_flaw": {
+          "name": "Fatal Flaw",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Intelligence + Auspex vs Composure or Stamina + Subterfuge"
+          ],
+          "system": "The vampire identifies the target's lowest mental or physical defense pool and gains a two-dice bonus when attacking that pool. If the user tells someone else about the weakness, they gain a one-die bonus.",
+          "duration": "One scene",
+          "amalgam": "Oblivion 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 71
+            }
+          ]
+        }
+      },
+      "5": {
+        "unburdening_the_bestial_soul": {
+          "name": "Unburdening the Bestial Soul",
+          "cost": "Two Rouse Checks and one Stain",
+          "dice_pools": [
+            "Composure + Auspex vs Humanity"
+          ],
+          "system": "Against another vampire of equal or lower Humanity, each margin success removes one Stain or creates a one-for-one buffer against future Stains. A critical win can instead restore one point of Humanity, but only once per vampire. For the remainder of the session the subject is mentally linked to the user and the user's Dominate succeeds automatically without eye contact.",
+          "duration": "One session",
+          "prerequisite": "Panacea",
+          "amalgam": "Dominate 3",
+          "notes": [
+            "Automatically fails if the target's Humanity is higher than the user's.",
+            "Can only be used on vampires."
+          ],
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 71
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Celerity": {
+    "levels": {
+      "2": {
+        "rush_job": {
+          "name": "Rush Job",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "The vampire accelerates time-consuming Skill tasks. A complete mundane action can be performed as a minor action. The power cannot accelerate attacks, defenses, or actively resisted tasks.",
+          "duration": "One scene",
+          "notes": [
+            "Some accelerated attacks or similar actions can still suffer penalties according to the Storyteller's judgment."
+          ],
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 72
+            }
+          ]
+        }
+      },
+      "3": {
+        "weaving": {
+          "name": "Weaving",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "The vampire ignores the diminishing dice-pool penalty for multiple ranged attacks made with Dexterity + Athletics and adds their Celerity rating to those attempts.",
+          "duration": "One scene",
+          "prerequisite": "Rapid Reflexes",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 72
+            }
+          ]
+        }
+      },
+      "4": {
+        "blurred_momentum": {
+          "name": "Blurred Momentum",
+          "cost": "One Rouse Check per turn",
+          "dice_pools": [],
+          "system": "Any attack against the user that has fewer successes than the user's Celerity rating automatically misses, including attacks against a surprised or otherwise undefended vampire.",
+          "duration": "Until the user stops paying the maintenance cost",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 72
+            }
+          ]
+        },
+        "unseen_strike": {
+          "name": "Unseen Strike",
+          "cost": "Two Rouse Checks",
+          "dice_pools": [
+            "Dexterity + Celerity vs Wits + Awareness"
+          ],
+          "system": "Combines Blink and Vanish to make an attack from concealment. A target that loses the contest is surprised; if the target wins, the attack proceeds using the normal Blink rules.",
+          "duration": "One turn",
+          "prerequisite": "Blink",
+          "amalgam": "Obfuscate 4",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 73
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Dominate": {
+    "levels": {
+      "1": {
+        "slavish_devotion": {
+          "name": "Slavish Devotion",
+          "cost": "None beyond the triggering Dominate power",
+          "dice_pools": [],
+          "system": "A thrall with a Blood Bond to the user becomes harder for other vampires to Dominate. Their resistance pool suffers a penalty equal to the user's Fortitude rating when another vampire attempts to Dominate them.",
+          "duration": "Passive",
+          "amalgam": "Fortitude 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 73
+            }
+          ]
+        }
+      },
+      "2": {
+        "domitors_favor": {
+          "name": "Domitor's Favor",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "A Blood-Bound thrall's attempts to defy the user suffer a three-dice penalty and the thrall cannot spend Willpower on such resistance. A total failure does not weaken the Blood Bond during the following month.",
+          "duration": "One month",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 73
+            }
+          ]
+        }
+      },
+      "4": {
+        "ancestral_dominion": {
+          "name": "Ancestral Dominion",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Dominate vs Resolve + Occult"
+          ],
+          "system": "A vampire can silently compel one of their descendants without eye contact or spoken words. The target receives one additional resistance die for each generation separating them from the user. Normal Dominate limitations otherwise apply.",
+          "duration": "Until the command is fulfilled or the scene ends",
+          "prerequisite": "Mesmerize",
+          "amalgam": "Blood Sorcery 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 73
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 104
+            }
+          ]
+        },
+        "implant_suggestion": {
+          "name": "Implant Suggestion",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Dominate vs Composure + Resolve"
+          ],
+          "system": "The vampire implants a suggestion without the target needing to be prepared. Prepared targets and vampires resist normally; radical changes to a target's core beliefs may still resist the effect.",
+          "duration": "One scene",
+          "amalgam": "Presence 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 73
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Fortitude": {
+    "levels": {
+      "2": {
+        "earths_perseverance": {
+          "name": "Earth's Perseverance",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "The vampire becomes extraordinarily resistant to impacts and can ignore or reduce ordinary physical movement penalties. The power does not itself prevent other sources of damage and ends when the scene ends or the power is allowed to lapse.",
+          "duration": "One scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 74
+            }
+          ]
+        },
+        "invigorating_vitae": {
+          "name": "Invigorating Vitae",
+          "cost": "As the normal Rouse Check required to give Blood",
+          "dice_pools": [],
+          "system": "Vitae given to a living recipient heals three points of Aggravated Health damage per Rouse Check instead of the normal amount. Other effects of drinking the vampire's Blood remain unchanged.",
+          "duration": "Passive",
+          "amalgam": "Auspex 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 74
+            }
+          ]
+        }
+      },
+      "3": {
+        "valeren": {
+          "name": "Valeren",
+          "cost": "One Rouse Check and additional Health depending on circumstances",
+          "dice_pools": [
+            "Composure + Fortitude"
+          ],
+          "system": "Roll against Difficulty 2 to heal another vampire's Health. Restore superficial Health equal to the margin or one Aggravated Health level for every three successes in the margin. Using the power for a full scene reduces Difficulty to 0. A subject can only be affected once per night; healing multiple subjects can inflict superficial Health damage on the user.",
+          "duration": "N/A",
+          "amalgam": "Auspex 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 74
+            }
+          ]
+        }
+      },
+      "4": {
+        "gorgons_scales": {
+          "name": "Gorgon's Scales",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "Grants a temporary defense based on the user's most recent Resonance: Choleric protects against staking, Melancholy converts aggravated fire damage to superficial, Phlegmatic grants +4 dice against Auspex attempts to reveal the user or their knowledge, and Sanguine converts aggravated sunlight damage to superficial. Each benefit is lost after its specified trigger or when the Resonance is lost.",
+          "duration": "One scene or until the Resonance-dependent protection is exhausted",
+          "notes": [
+            "Choleric: a stake in the heart decays or turns to ash at scene end and releases paralysis.",
+            "Melancholy and Sanguine protections end after reducing four levels of the relevant aggravated damage.",
+            "Phlegmatic protection lasts for the scene."
+          ],
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 74
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Obfuscate": {
+    "levels": {
+      "2": {
+        "chimerstry": {
+          "name": "Chimerstry",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Obfuscate vs Composure + Wits"
+          ],
+          "system": "Creates a brief single-sense hallucination for a target who can see the user. A successful use distracts the victim, generally imposing a two-dice penalty to their next action; depending on the result, the victim may lose that active action entirely. The illusion cannot be recorded or transmitted and can normally be used only once per conflict.",
+          "duration": "One turn",
+          "amalgam": "Presence 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 76
+            }
+          ]
+        }
+      },
+      "3": {
+        "fata_morgana": {
+          "name": "Fata Morgana",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Obfuscate"
+          ],
+          "system": "Creates a multi-sensory hallucination affecting any number of observers who can see the user or be seen by them. The Difficulty depends on the number of senses involved and the size of the area. Supernaturally perceptive observers can contest the illusion. Interaction with the illusion can end it.",
+          "duration": "One scene",
+          "amalgam": "Presence 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 77
+            }
+          ]
+        },
+        "mental_maze": {
+          "name": "Mental Maze",
+          "cost": "One or three Rouse Checks",
+          "dice_pools": [
+            "Charisma + Obfuscate vs Wits + Resolve"
+          ],
+          "system": "The user verbally traps a target in a perceived maze. On a win, the victim struggles to find an exit from the surrounding environment. Two additional Rouse Checks can restrict the effect to a single room or dense outdoor area. Mortals cannot attempt to escape the effect; supernatural targets can test Resolve + Awareness once per scene. Dangerous conditions can break the effect.",
+          "duration": "One night",
+          "amalgam": "Dominate 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 77
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 85
+            }
+          ]
+        },
+        "mind_masque": {
+          "name": "Mind Masque",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Intelligence + Obfuscate vs Difficulty based on sophistication of the deception"
+          ],
+          "system": "Masks the user's emotional state, persona, thoughts, and memories. The margin of success is added to the Difficulty of supernatural attempts to read or interpret the user's mind. A failed reader can accept the false persona as genuine.",
+          "duration": "One scene",
+          "amalgam": "Dominate 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 78
+            }
+          ]
+        },
+        "isolation_mask": {
+          "name": "Maska Izolacji",
+          "name_english": "Isolation Mask",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Obfuscate vs Charisma + Insight"
+          ],
+          "system": "The power imposes the effect of Mask of a Thousand Faces on an unaware victim, causing others to perceive the victim as a generic person rather than their actual identity. If the victim realizes they are under the effect, it ends immediately; the power cannot be used on someone already aware of its use.",
+          "duration": "One night, plus one additional night per margin success",
+          "prerequisite": "Mask of a Thousand Faces",
+          "amalgam": "Dominate 1",
+          "notes": [
+            "The Sabbat source treats the power as especially useful for socially isolating a target.",
+            "The source is Polish, so the original sourcebook name is preserved."
+          ],
+          "sources": [
+            {
+              "book": "Sabbat: Czarna Ręka",
+              "page": 48
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Potence": {
+    "levels": {
+      "2": {
+        "relentless_grasp": {
+          "name": "Relentless Grasp",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "Adds the user's Potence rating as automatic successes to attempts to maintain a hold, including maintaining a grapple. It does not affect the initial grapple roll.",
+          "duration": "One scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 79
+            }
+          ]
+        }
+      },
+      "3": {
+        "wrecker": {
+          "name": "Wrecker",
+          "cost": "Free",
+          "dice_pools": [],
+          "system": "For feats of strength involving damage or destruction of an inanimate object, count Potence twice when applying Prowess.",
+          "duration": "As Prowess",
+          "prerequisite": "Prowess",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 79
+            }
+          ]
+        }
+      },
+      "4": {
+        "crash_down": {
+          "name": "Crash Down",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Strength + Potence vs Dexterity + Athletics"
+          ],
+          "system": "The vampire creates a violent impact around themselves. Targets in the area take Superficial damage equal to the margin; sufficient damage can also knock a target down or strip them of their ability to defend effectively.",
+          "duration": "Instantaneous",
+          "prerequisite": "Soaring Leap",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 79
+            }
+          ]
+        }
+      },
+      "5": {
+        "subtle_hammer": {
+          "name": "Subtle Hammer",
+          "cost": "Free",
+          "dice_pools": [],
+          "system": "Unarmed attacks and feats of Strength count as two-dice minor actions, allowing them to be performed as a minor action under the power's restrictions. Only one such attack can be made per turn and it prevents other attacks that turn.",
+          "duration": "Passive",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 79
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Presence": {
+    "levels": {
+      "1": {
+        "eyes_of_the_serpent": {
+          "name": "Eyes of the Serpent",
+          "cost": "Free",
+          "dice_pools": [
+            "Charisma + Presence vs Wits + Composure"
+          ],
+          "system": "By catching a mortal's gaze, the vampire immobilizes them for as long as eye contact is maintained. The effect ends if the victim is damaged or forcibly removed. A vampire can be affected through a contested roll, and the vampire victim can spend Willpower after the first turn to escape.",
+          "duration": "Until eye contact is broken or the scene ends",
+          "amalgam": "Protean 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 80
+            },
+            {
+              "book": "Anarchiści",
+              "page": 185
+            }
+          ]
+        }
+      },
+      "2": {
+        "melpominee": {
+          "name": "Melpominee",
+          "cost": "Free",
+          "dice_pools": [],
+          "system": "The user can employ Awe, Daunt, Dread Gaze, Entrancement, and Majesty through their voice alone. They do not need line of sight to the target, only sufficient proximity for the target to hear them.",
+          "duration": "N/A",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 80
+            }
+          ]
+        }
+      },
+      "3": {
+        "thrown_voice": {
+          "name": "Thrown Voice",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "N/A"
+          ],
+          "system": "The vampire makes their voice emanate from any point within sight. The voice can be left in place and can carry other voice-based powers.",
+          "duration": "One scene",
+          "amalgam": "Auspex 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 80
+            }
+          ]
+        }
+      },
+      "4": {
+        "suffuse_the_edifice": {
+          "name": "Suffuse the Edifice",
+          "cost": "As transmitted power",
+          "dice_pools": [
+            "As power transmitted"
+          ],
+          "system": "Extends Awe, Daunt, or Majesty through a building or similar locale. Anyone inside or looking at the building resists the transmitted power as though the vampire were present.",
+          "duration": "As transmitted power",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 80
+            }
+          ]
+        },
+        "true_loves_face": {
+          "name": "True Love's Face",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Manipulation + Presence vs Composure + Wits"
+          ],
+          "system": "The victim alone perceives the vampire as a mortal with whom they have a strong emotional connection. A hidden contest determines whether the disguise carries the intended emotional weight. The power can also alter the victim's perception of the vampire's identity in a way useful for social manipulation.",
+          "duration": "One scene",
+          "amalgam": "Obfuscate 3",
+          "sources": [
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 85
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Protean": {
+    "levels": {
+      "2": {
+        "vicissitude": {
+          "name": "Vicissitude",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Resolve + Protean"
+          ],
+          "system": "Each success permits one change to the user's body, up to a number of total changes equal to Protean. Every change costs one Physical Attribute dot, never reducing an Attribute below 1. Options include reallocating Physical Attributes, creating +2 Damage natural weapons once per subject, creating up to six points of armor, altering Appearance, or other Storyteller-approved changes.",
+          "duration": "Permanent",
+          "amalgam": "Dominate 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 81
+            }
+          ]
+        }
+      },
+      "3": {
+        "fleshcrafting": {
+          "name": "Fleshcrafting",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Resolve + Protean vs Stamina + Resolve"
+          ],
+          "system": "The vampire performs Vicissitude on another subject. The subject must be willing or restrained and the work takes a full scene. Each use permits changes up to the user's Protean rating; unwilling subjects resist normally. Changes can be repaired as Aggravated damage.",
+          "duration": "Permanent",
+          "prerequisite": "Vicissitude",
+          "amalgam": "Dominate 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 82
+            }
+          ]
+        },
+        "absorbing_the_entrails": {
+          "name": "Wchłonięcie w Trzewia",
+          "name_english": "Absorption into the Entrails",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Strength + Protean"
+          ],
+          "system": "Within roughly five meters and with at least one fresh corpse present, the vampire absorbs blood and remains through their skin. Each success can consume one body and slakes one Hunger, up to the user's Blood Sorcery rating per activation and never reducing Hunger to zero. The process takes one turn per body and is extremely conspicuous.",
+          "duration": "One turn per absorbed body",
+          "amalgam": "Blood Sorcery 2",
+          "notes": [
+            "Does not work on vampire remains.",
+            "Sourcebook language is Polish; the original name is preserved."
+          ],
+          "sources": [
+            {
+              "book": "Sabbat: Czarna Ręka",
+              "page": 49
+            }
+          ]
+        }
+      },
+      "4": {
+        "horrid_form": {
+          "name": "Horrid Form",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "After one full turn of activation, the vampire gains free Vicissitude changes equal to Protean without losing Attribute dots. Redistribution, Weapons, and Armor are explicitly allowed; more creative changes are possible at the Storyteller's discretion. Criticals made while in the form are messy and Frenzy tests are at +2 Difficulty.",
+          "duration": "One scene, unless ended sooner",
+          "prerequisite": "Vicissitude",
+          "amalgam": "Dominate 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 83
+            }
+          ]
+        }
+      },
+      "5": {
+        "one_with_the_land": {
+          "name": "One with the Land",
+          "cost": "Two Rouse Checks",
+          "dice_pools": [
+            "Wits + Animalism vs relevant opposing pool when sensing deliberately hidden events",
+            "Resolve + Protean (when rising early)"
+          ],
+          "system": "Functions like Earth Meld but is not limited by the surface. While merged, the vampire can perceive sensory stimuli within roughly one kilometer through nearby animals. Rising before the following night requires Resolve + Protean Difficulty 4; a critical win allows immediate emergence.",
+          "duration": "One day or more, or until physically disturbed",
+          "prerequisite": "Earth Meld",
+          "amalgam": "Animalism 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 83
+            }
+          ]
+        },
+        "the_heart_of_darkness": {
+          "name": "The Heart of Darkness",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "The vampire removes their own heart and stores it separately. Removal causes two Aggravated Health damage. While the heart is absent, the vampire gains +2 dice to resist Frenzy but suffers -2 dice to Remorse rolls and cannot normally be staked unless the removed heart is found and impaled separately. The heart can be fed Blood and can be destroyed only by fire or sunlight.",
+          "duration": "Permanent until the heart is returned or destroyed",
+          "amalgam": "Fortitude 2",
+          "sources": [
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 85
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Oblivion": {
+    "levels": {
+      "1": {
+        "ashes_to_ashes": {
+          "name": "Ashes to Ashes",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Stamina + Oblivion vs Stamina + Medicine or Fortitude"
+          ],
+          "system": "The vampire introduces vitae into a corpse, causing an ordinary corpse to disintegrate over three turns. Animated corpses resist with Stamina + Medicine or Fortitude and dissolve over five turns minus the margin, with a critical win causing immediate destruction.",
+          "duration": "Variable",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 84
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 204
+            }
+          ]
+        },
+        "the_binding_fetter": {
+          "name": "The Binding Fetter",
+          "cost": "Free",
+          "dice_pools": [
+            "Wits + Oblivion"
+          ],
+          "system": "Attunes the vampire's senses to the fetters of ghosts, revealing objects and locations important to them and allowing the vampire to identify a wraith's anchoring objects. While active, the user is distracted by the sensory information.",
+          "duration": "Variable",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 85
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 204
+            }
+          ]
+        },
+        "oblivions_sight": {
+          "name": "Oblivion's Sight",
+          "cost": "Free",
+          "dice_pools": [],
+          "system": "Allows the vampire to see in supernatural darkness and perceive otherwise hidden or intangible ghosts. The vampire's eyes become visibly unnatural while the power is active.",
+          "duration": "One scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 85
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 293
+            }
+          ]
+        },
+        "shadow_cloak": {
+          "name": "Shadow Cloak",
+          "cost": "Free",
+          "dice_pools": [],
+          "system": "The vampire blends with surrounding shadow, gaining a bonus to Stealth and Intimidation against mortals. The effect is passive.",
+          "duration": "Passive",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 85
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 293
+            }
+          ]
+        }
+      },
+      "2": {
+        "arms_of_ahriman": {
+          "name": "Arms of Ahriman",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Wits + Oblivion"
+          ],
+          "system": "The vampire manifests shadow tendrils that can grapple or strike. Multiple tendrils split the dice pool. The user gains a damage bonus based on Oblivion and can control the manifestations within their range. Bright light can banish them, though a successful Wits + Oblivion test can protect them from light for a turn.",
+          "duration": "One scene or until ended/destroyed",
+          "amalgam": "Potence 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 86
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 293
+            }
+          ]
+        },
+        "fatal_prediction": {
+          "name": "Fatal Prediction",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Resolve + Oblivion vs Wits + Occult"
+          ],
+          "system": "Places invisible strands of entropy on a mortal or ghoul. For each success in the margin, the target suffers one point of Aggravated damage during the following 24 hours. The user must not interact with the victim directly or indirectly during the effect, or the power may fail.",
+          "duration": "24 hours",
+          "amalgam": "Auspex 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 86
+            }
+          ]
+        },
+        "shadow_cast": {
+          "name": "Shadow Cast",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "The vampire creates a supernatural shadow from their body that remains even without an appropriate light source. It can be elongated or distorted and provides a better medium for other Oblivion powers. Witnesses may notice that the shadow has no visible source.",
+          "duration": "One scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 87
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 293
+            }
+          ]
+        },
+        "where_the_veil_thins": {
+          "name": "Where the Veil Thins",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Intelligence + Oblivion"
+          ],
+          "system": "Determines the density of the veil between the living world and the Underworld in an area up to the size of a building or landmark. A critical win reveals whether the density recently changed; a total failure gives a false reading. Knowing the density allows Oblivion users to take advantage of a weakened veil.",
+          "duration": "One turn",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 87
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 205
+            }
+          ]
+        },
+        "fatal_precognition": {
+          "name": "Fatal Precognition",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Resolve + Oblivion"
+          ],
+          "system": "When able to see or hear a non-vampire, the vampire receives a vision of that target's impending death. Each margin success adds clarity and additional clues about the corpse, cause, time, place, or possible discoverer. A total failure blinds the user for the remainder of the scene and prevents reuse on that target. Anyone attempting to deliberately circumvent the predicted fate suffers increased Difficulties until the prophecy is fulfilled, avoided, or the story ends.",
+          "duration": "Until fulfilled, avoided, or the story ends",
+          "amalgam": "Auspex 2",
+          "sources": [
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 204
+            }
+          ]
+        }
+      },
+      "3": {
+        "aura_of_decay": {
+          "name": "Aura of Decay",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Stamina + Oblivion vs Stamina + Medicine or Fortitude"
+          ],
+          "system": "Living and nonliving material within approximately five meters begins to decay. Plants die, food rots, and even inorganic material can crumble. Living targets resist and suffer unhalved Superficial Health damage equal to the margin over the scene. The user emits a noticeable rotting odor while the power lasts.",
+          "duration": "One scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 88
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 205
+            }
+          ]
+        },
+        "passion_feast": {
+          "name": "Passion Feast",
+          "cost": "Free",
+          "dice_pools": [
+            "Resolve + Oblivion vs Resolve + Composure"
+          ],
+          "system": "At close range, the vampire feeds on a wraith's passion instead of blood. A win inflicts one Aggravated Willpower damage to the wraith and reduces the vampire's Hunger by one for the remainder of the night. Feeding can cause a Stain and may eventually turn a wraith into a murderous spectre if all its passions are consumed.",
+          "duration": "Passive",
+          "amalgam": "Fortitude 2",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 88
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 206
+            }
+          ]
+        },
+        "shadow_perspective": {
+          "name": "Shadow Perspective",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "Projects the vampire's senses into a shadow within line of sight, including their own shadow created by Shadow Cast. The vampire perceives both their real surroundings and the shadow's perspective simultaneously. The presence in the shadow is imperceptible except by supernatural means.",
+          "duration": "Up to one scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 89
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 294
+            }
+          ]
+        },
+        "shadow_servant": {
+          "name": "Shadow Servant",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "Animates part of the user's shadow as an obedient autonomous servant. It can spy, climb, pass through tiny openings, follow instructions, and report what it sees and hears when reabsorbed. Bright light can banish it, though a Wits + Oblivion test can protect it for a turn.",
+          "duration": "One scene",
+          "amalgam": "Auspex 1",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 89
+            }
+          ]
+        },
+        "touch_of_oblivion": {
+          "name": "Touch of Oblivion",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Strength + Brawl (if the victim avoids the grip)"
+          ],
+          "system": "After gripping the victim, the vampire inflicts two levels of Aggravated damage and a crippling injury to the targeted body part. The effect can cripple limbs or impair sight, hearing, or speech. The Storyteller may assign Stains for deliberate mutilation.",
+          "duration": "One turn",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 89
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 294
+            }
+          ]
+        }
+      },
+      "4": {
+        "necrotic_plague": {
+          "name": "Necrotic Plague",
+          "cost": "One Rouse Check; two Stains in the Cults version",
+          "dice_pools": [
+            "Intelligence + Oblivion vs Stamina + Medicine or Fortitude"
+          ],
+          "system": "Infects a mortal with a supernatural disease. Weak or already compromised mortals are automatically infected; healthy victims resist. An infected victim suffers one Aggravated Health damage at the start of each scene for a number of scenes equal to the user's Oblivion rating. The disease cannot be treated medically, though vitae can heal it. On a critical activation the disease may become transmissible by touch.",
+          "duration": "Variable; based on the user's Oblivion rating",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 90
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 206
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 207
+            }
+          ]
+        },
+        "stygian_shroud": {
+          "name": "Stygian Shroud",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "Expands surrounding darkness into a supernatural zone. The area imposes a penalty to ordinary actions and harms mortals caught within it. Vampires with suitable supernatural sight can ignore some or all of the penalties.",
+          "duration": "One scene",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 91
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 295
+            }
+          ]
+        }
+      },
+      "5": {
+        "shadow_step": {
+          "name": "Shadow Step",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "The vampire enters a sufficiently large shadow and emerges from another shadow within sight or a suitable mystical connection. The vampire can bring a willing passenger or an unwilling target they are grappling.",
+          "duration": "One turn",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 91
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 295
+            }
+          ]
+        },
+        "skuld_fulfilled": {
+          "name": "Skuld Fulfilled",
+          "cost": "Two Rouse Checks",
+          "dice_pools": [
+            "Stamina + Oblivion vs Stamina × 2 or Stamina + Fortitude"
+          ],
+          "system": "Reintroduces a serious condition previously suffered and recovered from, such as a disease or healed injury. On ghouls, it also removes their immunity to aging and strips vitae from their system. A critical win can worsen the result dramatically; a total failure prevents the user from using the power on that individual again.",
+          "duration": "Variable, depending on the reintroduced condition",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 92
+            },
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 207
+            }
+          ]
+        },
+        "tenebrous_avatar": {
+          "name": "Tenebrous Avatar",
+          "cost": "Two Rouse Checks",
+          "dice_pools": [],
+          "system": "Transforms the vampire into a two-dimensional shadow. Fire and sunlight remain dangerous, but ordinary physical attacks are ineffective. The avatar can travel along walls and floors, pass through small openings, envelop targets, and feed or suffocate through its shadowy form.",
+          "duration": "One scene or until ended",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 92
+            },
+            {
+              "book": "Chicago by Night",
+              "page": 295
+            }
+          ]
+        },
+        "withering_spirit": {
+          "name": "Withering Spirit",
+          "cost": "Two Rouse Checks and variable Stains",
+          "dice_pools": [
+            "Resolve + Oblivion vs Resolve + Occult or Fortitude"
+          ],
+          "system": "Targets the victim's spirit rather than their body. Each success in the margin inflicts two Aggravated Willpower damage. If the victim becomes Impaired by this power, the power can prevent them from returning as a wraith after death. The Storyteller may assign Stains for destroying a soul.",
+          "duration": "One turn",
+          "sources": [
+            {
+              "book": "Cults of the Blood Gods",
+              "page": 208
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Blood Sorcery": {
+    "levels": {
+      "2": {
+        "scour_secrets": {
+          "name": "Scour Secrets",
+          "cost": "One Rouse Check",
+          "dice_pools": [
+            "Intelligence + Blood Sorcery"
+          ],
+          "system": "Blood spreads over an object or collection of written material and helps the vampire locate desired information. Difficulty ranges from 2 for a simple letter to 5 or more for encrypted or protected information. The power does not translate unknown languages or automatically parse unfamiliar ciphers.",
+          "duration": "One night or until the information is found/the search ends",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 98
+            }
+          ]
+        }
+      },
+      "3": {
+        "pośrednia_więź": {
+          "name": "Pośrednia Więź",
+          "name_english": "Indirect Bond",
+          "cost": "One Rouse Check",
+          "dice_pools": [],
+          "system": "The vampire preserves the binding properties of their vitae while it is stored in a container or in the body of a ghoul. Anyone drinking that stored vitae experiences the Blood Bond as though they had drunk directly from the vampire. One activation can affect an amount of Blood corresponding to three Rouse Checks.",
+          "duration": "Until the stored vitae is consumed or otherwise loses potency",
+          "sources": [
+            {
+              "book": "Sabbat: Czarna Ręka",
+              "page": 49
+            }
+          ]
+        }
+      },
+      "4": {
+        "blood_aegis": {
+          "name": "Blood Aegis",
+          "cost": "One or more Rouse Checks",
+          "dice_pools": [],
+          "system": "The user's vitae forms a floating defensive barrier. Each Rouse Check spent reduces damage from incoming ranged attacks by five. The protection remains until the allocated protection is exhausted.",
+          "duration": "One scene or until the protection is spent",
+          "sources": [
+            {
+              "book": "Player's Guide",
+              "page": 98
+            }
+          ]
+        }
+      },
+      "5": {
+        "odzyskanie_vitae": {
+          "name": "Odzyskanie Vitae",
+          "name_english": "Vitae Recovery",
+          "cost": "One or more Stains when used outside the Sabbat",
+          "dice_pools": [],
+          "system": "The vampire recalls Blood previously given to their ghouls regardless of distance. Each selected ghoul suffers five levels of Aggravated damage as their body rapidly ages and the vitae is violently drawn back to the source; the vampire slakes two Hunger per ghoul, without reducing Hunger to zero.",
+          "duration": "Instantaneous",
+          "notes": [
+            "The Sabbat source presents this power as usable without a Rouse Check by Sabbat characters.",
+            "The source warns that non-Sabbat users gain Stains from using the power."
+          ],
+          "sources": [
+            {
+              "book": "Sabbat: Czarna Ręka",
+              "page": 50
+            }
+          ]
+        }
+      }
+    }
+  }
+}

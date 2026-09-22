@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "book_id": "players-guide",
+    "book_name": "Player's Guide",
+    "source_file": "R:\\Podręczniki\\Wampir\\647035821-v5-Players-Guide-Digital-low-res-v2.pdf",
+    "extraction_status": "pending",
+    "content_type": "clans"
+  },
+  "clans": {
+    "Banu Haqim": {
+      "_note": "Page 17 - check if differs from Camarilla version"
+    },
+    "Hecata": {
+      "_note": "Page 22 - NEW clan"
+    },
+    "Lasombra": {
+      "_note": "Page 29 - extended from Chicago"
+    },
+    "Ministry": {
+      "_note": "Page 35 - NEW clan"
+    },
+    "Ravnos": {
+      "_note": "Page 41 - NEW clan"
+    },
+    "Salubri": {
+      "_note": "Page 46 - NEW clan"
+    },
+    "Tzimisce": {
+      "_note": "Page 52 - NEW clan"
+    }
+  }
+}

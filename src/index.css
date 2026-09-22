@@ -39,50 +39,52 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: var(--font-body);
-  background-color: var(--bg-void);
+  background-color: #1a1212;
   background-image:
+    /* darken + blood accents over the wall */
     radial-gradient(
-      ellipse 85% 50% at 15% -12%,
-      rgba(80, 14, 20, 0.18),
+      ellipse 90% 55% at 12% -10%,
+      rgba(90, 12, 18, 0.35),
       transparent 55%
     ),
     radial-gradient(
-      ellipse 60% 45% at 100% 5%,
-      rgba(40, 40, 48, 0.35),
-      transparent 50%
-    ),
-    radial-gradient(
-      ellipse 50% 35% at 50% 110%,
-      rgba(0, 0, 0, 0.7),
-      transparent 55%
+      circle at 50% 30%,
+      rgba(6, 4, 4, 0.45) 0%,
+      rgba(4, 3, 3, 0.82) 100%
     ),
     linear-gradient(
-      170deg,
-      var(--bg-deep) 0%,
-      var(--bg-mid) 48%,
-      #080808 100%
-    );
+      180deg,
+      rgba(8, 5, 5, 0.55),
+      rgba(5, 3, 3, 0.72)
+    ),
+    /* plaster wall texture — path from --texture-plaster (BASE_URL) */
+    var(--texture-plaster);
+  background-size:
+    auto,
+    auto,
+    auto,
+    560px 560px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   background-attachment: fixed;
+  background-blend-mode: normal, normal, normal, normal;
   scrollbar-width: thin;
   scrollbar-color: #3a3a3e var(--bg-deep);
 }
 
+/* Scratches layer */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.4;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 3px,
-      rgba(0, 0, 0, 0.08) 3px,
-      rgba(0, 0, 0, 0.08) 4px
-    ),
-    radial-gradient(circle at 50% 30%, transparent 20%, rgba(0, 0, 0, 0.65) 100%);
+  background-image: var(--texture-scratches);
+  background-size: 420px 420px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.55;
+  mix-blend-mode: overlay;
+  filter: contrast(1.35) brightness(0.85);
 }
 
 #root {

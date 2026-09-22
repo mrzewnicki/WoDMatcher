@@ -1,0 +1,766 @@
+{
+  "updated": 95,
+  "missing": [],
+  "results": [
+    {
+      "discipline": "Animalism",
+      "level": 1,
+      "key": "bond_famulus",
+      "name": "Bond Famulus",
+      "page": 245,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 1,
+      "key": "sense_the_beast",
+      "name": "Sense the Beast",
+      "page": 245,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 2,
+      "key": "feral_whispers",
+      "name": "Feral Whispers",
+      "page": 245,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 3,
+      "key": "animal_succulence",
+      "name": "Animal Succulence",
+      "page": 246,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 3,
+      "key": "quell_the_beast",
+      "name": "Quell the Beast",
+      "page": 246,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 3,
+      "key": "unliving_hive",
+      "name": "Unliving Hive",
+      "page": 246,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 4,
+      "key": "subsume_the_spirit",
+      "name": "Subsume the Spirit",
+      "page": 247,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 5,
+      "key": "animal_dominion",
+      "name": "Animal Dominion",
+      "page": 247,
+      "method": "heading"
+    },
+    {
+      "discipline": "Animalism",
+      "level": 5,
+      "key": "drawing_out_the_beast",
+      "name": "Drawing Out the Beast",
+      "page": 247,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 1,
+      "key": "cats_grace",
+      "name": "Cat's Grace",
+      "page": 252,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 1,
+      "key": "rapid_reflexes",
+      "name": "Rapid Reflexes",
+      "page": 253,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 2,
+      "key": "fleetness",
+      "name": "Fleetness",
+      "page": 253,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 3,
+      "key": "blink",
+      "name": "Blink",
+      "page": 253,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 3,
+      "key": "traversal",
+      "name": "Traversal",
+      "page": 253,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 4,
+      "key": "draught_of_elegance",
+      "name": "Draught of Elegance",
+      "page": 254,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 4,
+      "key": "unerring_aim",
+      "name": "Unerring Aim",
+      "page": 254,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 5,
+      "key": "lightning_strike",
+      "name": "Lightning Strike",
+      "page": 254,
+      "method": "heading"
+    },
+    {
+      "discipline": "Celerity",
+      "level": 5,
+      "key": "split_second",
+      "name": "Split Second",
+      "page": 254,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 1,
+      "key": "cloud_memory",
+      "name": "Cloud Memory",
+      "page": 256,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 1,
+      "key": "compel",
+      "name": "Compel",
+      "page": 256,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 2,
+      "key": "mesmerize",
+      "name": "Mesmerize",
+      "page": 256,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 2,
+      "key": "dementation",
+      "name": "Dementation",
+      "page": 256,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 3,
+      "key": "the_forgetful_mind",
+      "name": "The Forgetful Mind",
+      "page": 257,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 4,
+      "key": "rationalize",
+      "name": "Rationalize",
+      "page": 257,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 5,
+      "key": "mass_manipulation",
+      "name": "Mass Manipulation",
+      "page": 257,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 5,
+      "key": "terminal_decree",
+      "name": "Terminal Decree",
+      "page": 257,
+      "method": "heading"
+    },
+    {
+      "discipline": "Dominate",
+      "level": 5,
+      "key": "submerged_directive",
+      "name": "Submerged Directive",
+      "page": 257,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 1,
+      "key": "resilience",
+      "name": "Resilience",
+      "page": 258,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 1,
+      "key": "unswayable_mind",
+      "name": "Unswayable Mind",
+      "page": 258,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 2,
+      "key": "toughness",
+      "name": "Toughness",
+      "page": 258,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 2,
+      "key": "enduring_beasts",
+      "name": "Enduring Beasts",
+      "page": 258,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 3,
+      "key": "defy_bane",
+      "name": "Defy Bane",
+      "page": 259,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 3,
+      "key": "fortify_the_inner_facade",
+      "name": "Fortify the Inner Facade",
+      "page": 259,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 4,
+      "key": "draught_of_endurance",
+      "name": "Draught of Endurance",
+      "page": 259,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 5,
+      "key": "flesh_of_marble",
+      "name": "Flesh of Marble",
+      "page": 259,
+      "method": "heading"
+    },
+    {
+      "discipline": "Fortitude",
+      "level": 5,
+      "key": "prowess_from_pain",
+      "name": "Prowess from Pain",
+      "page": 260,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 1,
+      "key": "cloak_of_shadows",
+      "name": "Cloak of Shadows",
+      "page": 261,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 1,
+      "key": "silence_of_death",
+      "name": "Silence of Death",
+      "page": 261,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 2,
+      "key": "unseen_passage",
+      "name": "Unseen Passage",
+      "page": 261,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 3,
+      "key": "ghost_in_the_machine",
+      "name": "Ghost in the Machine",
+      "page": 262,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 3,
+      "key": "mask_of_a_thousand_faces",
+      "name": "Mask of a Thousand Faces",
+      "page": 262,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 4,
+      "key": "conceal",
+      "name": "Conceal",
+      "page": 262,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 4,
+      "key": "vanish",
+      "name": "Vanish",
+      "page": 262,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 5,
+      "key": "cloak_the_gathering",
+      "name": "Cloak the Gathering",
+      "page": 263,
+      "method": "heading"
+    },
+    {
+      "discipline": "Obfuscate",
+      "level": 5,
+      "key": "impostors_guise",
+      "name": "Impostor's Guise",
+      "page": 263,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 1,
+      "key": "lethal_body",
+      "name": "Lethal Body",
+      "page": 264,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 1,
+      "key": "soaring_leap",
+      "name": "Soaring Leap",
+      "page": 264,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 2,
+      "key": "prowess",
+      "name": "Prowess",
+      "page": 264,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 3,
+      "key": "brutal_feed",
+      "name": "Brutal Feed",
+      "page": 264,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 3,
+      "key": "spark_of_rage",
+      "name": "Spark of Rage",
+      "page": 265,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 3,
+      "key": "uncanny_grip",
+      "name": "Uncanny Grip",
+      "page": 265,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 4,
+      "key": "draught_of_might",
+      "name": "Draught of Might",
+      "page": 265,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 5,
+      "key": "earthshock",
+      "name": "Earthshock",
+      "page": 265,
+      "method": "heading"
+    },
+    {
+      "discipline": "Potence",
+      "level": 5,
+      "key": "fist_of_caine",
+      "name": "Fist of Caine",
+      "page": 266,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 1,
+      "key": "awe",
+      "name": "Awe",
+      "page": 267,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 1,
+      "key": "daunt",
+      "name": "Daunt",
+      "page": 267,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 2,
+      "key": "lingering_kiss",
+      "name": "Lingering Kiss",
+      "page": 267,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 3,
+      "key": "dread_gaze",
+      "name": "Dread Gaze",
+      "page": 267,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 3,
+      "key": "entrancement",
+      "name": "Entrancement",
+      "page": 268,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 4,
+      "key": "irresistible_voice",
+      "name": "Irresistible Voice",
+      "page": 268,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 4,
+      "key": "summon",
+      "name": "Summon",
+      "page": 268,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 5,
+      "key": "majesty",
+      "name": "Majesty",
+      "page": 268,
+      "method": "heading"
+    },
+    {
+      "discipline": "Presence",
+      "level": 5,
+      "key": "star_magnetism",
+      "name": "Star Magnetism",
+      "page": 269,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 1,
+      "key": "eyes_of_the_beast",
+      "name": "Eyes of the Beast",
+      "page": 269,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 1,
+      "key": "weight_of_the_feather",
+      "name": "Weight of the Feather",
+      "page": 269,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 2,
+      "key": "feral_weapons",
+      "name": "Feral Weapons",
+      "page": 270,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 3,
+      "key": "earth_meld",
+      "name": "Earth Meld",
+      "page": 270,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 3,
+      "key": "shapechange",
+      "name": "Shapechange",
+      "page": 270,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 4,
+      "key": "metamorphosis",
+      "name": "Metamorphosis",
+      "page": 271,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 5,
+      "key": "mist_form",
+      "name": "Mist Form",
+      "page": 271,
+      "method": "heading"
+    },
+    {
+      "discipline": "Protean",
+      "level": 5,
+      "key": "the_unfettered_heart",
+      "name": "The Unfettered Heart",
+      "page": 271,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 1,
+      "key": "corrosive_vitae",
+      "name": "Corrosive Vitae",
+      "page": 272,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 1,
+      "key": "a_taste_for_blood",
+      "name": "A Taste for Blood",
+      "page": 272,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 2,
+      "key": "extinguish_vitae",
+      "name": "Extinguish Vitae",
+      "page": 273,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 3,
+      "key": "blood_of_potency",
+      "name": "Blood of Potency",
+      "page": 273,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 3,
+      "key": "scorpions_touch",
+      "name": "Scorpion's Touch",
+      "page": 273,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 4,
+      "key": "theft_of_vitae",
+      "name": "Theft of Vitae",
+      "page": 274,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 5,
+      "key": "baals_caress",
+      "name": "Baal's Caress",
+      "page": 274,
+      "method": "heading"
+    },
+    {
+      "discipline": "Blood Sorcery",
+      "level": 5,
+      "key": "cauldron_of_blood",
+      "name": "Cauldron of Blood",
+      "page": 274,
+      "method": "heading"
+    },
+    {
+      "discipline": "Thin-Blood Alchemy",
+      "level": 1,
+      "key": "far_reach",
+      "name": "Far Reach",
+      "page": 284,
+      "method": "heading"
+    },
+    {
+      "discipline": "Thin-Blood Alchemy",
+      "level": 1,
+      "key": "haze",
+      "name": "Haze",
+      "page": 285,
+      "method": "heading"
+    },
+    {
+      "discipline": "Thin-Blood Alchemy",
+      "level": 1,
+      "key": "profane_hieros_gamos",
+      "name": "Profane Hieros Gamos",
+      "page": 285,
+      "method": "heading"
+    },
+    {
+      "discipline": "Thin-Blood Alchemy",
+      "level": 2,
+      "key": "envelop",
+      "name": "Envelop",
+      "page": 285,
+      "method": "heading"
+    },
+    {
+      "discipline": "Thin-Blood Alchemy",
+      "level": 3,
+      "key": "defractionate",
+      "name": "Defractionate",
+      "page": 286,
+      "method": "heading"
+    },
+    {
+      "discipline": "Thin-Blood Alchemy",
+      "level": 4,
+      "key": "airborne_momentum",
+      "name": "Airborne Momentum",
+      "page": 287,
+      "method": "heading"
+    },
+    {
+      "discipline": "Thin-Blood Alchemy",
+      "level": 5,
+      "key": "awaken_the_sleeper",
+      "name": "Awaken the Sleeper",
+      "page": 287,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 1,
+      "key": "heightened_senses",
+      "name": "Heightened Senses",
+      "page": 249,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 1,
+      "key": "sense_the_unseen",
+      "name": "Sense the Unseen",
+      "page": 249,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 2,
+      "key": "premonition",
+      "name": "Premonition",
+      "page": 249,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 3,
+      "key": "scry_the_soul",
+      "name": "Scry the Soul",
+      "page": 250,
+      "method": "heading-over-index"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 3,
+      "key": "share_the_senses",
+      "name": "Share the Senses",
+      "page": 250,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 4,
+      "key": "spirits_touch",
+      "name": "Spirit’s Touch",
+      "page": 250,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 5,
+      "key": "clairvoyance",
+      "name": "Clairvoyance",
+      "page": 251,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 5,
+      "key": "possession",
+      "name": "Possession",
+      "page": 251,
+      "method": "heading"
+    },
+    {
+      "discipline": "Auspex",
+      "level": 5,
+      "key": "telepathy",
+      "name": "Telepathy",
+      "page": 252,
+      "method": "heading"
+    }
+  ]
+}

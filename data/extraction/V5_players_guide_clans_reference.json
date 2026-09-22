@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "book_id": "players-guide",
+    "book_name": "Player's Guide",
+    "source_file": "R:\\Podręczniki\\Wampir\\647035821-v5-Players-Guide-Digital-low-res-v2.pdf",
+    "type": "reference_map",
+    "priority": "HIGH",
+    "note": "7 NEW clans to extract"
+  },
+  "new_clans": {
+    "Banu Haqim": {
+      "page": 17,
+      "disciplines": ["to extract from page"],
+      "bane": "to extract",
+      "compulsion": "to extract",
+      "note": "Compare with Camarilla book version"
+    },
+    "Hecata": {
+      "page": 22,
+      "disciplines": ["to extract - likely includes Oblivion"],
+      "bane": "to extract",
+      "compulsion": "to extract",
+      "note": "COMPLETELY NEW clan"
+    },
+    "Lasombra": {
+      "page": 29,
+      "disciplines": ["to extract - includes Oblivion"],
+      "bane": "to extract",
+      "compulsion": "to extract",
+      "note": "Extended from Chicago by Night"
+    },
+    "Ministry": {
+      "page": 35,
+      "disciplines": ["to extract"],
+      "bane": "to extract",
+      "compulsion": "to extract",
+      "note": "COMPLETELY NEW clan (formerly Followers of Set)"
+    },
+    "Ravnos": {
+      "page": 41,
+      "disciplines": ["to extract"],
+      "bane": "to extract",
+      "compulsion": "to extract",
+      "note": "COMPLETELY NEW clan"
+    },
+    "Salubri": {
+      "page": 46,
+      "disciplines": ["to extract"],
+      "bane": "to extract",
+      "compulsion": "to extract",
+      "note": "COMPLETELY NEW clan"
+    },
+    "Tzimisce": {
+      "page": 52,
+      "disciplines": ["to extract"],
+      "bane": "to extract",
+      "compulsion": "to extract",
+      "note": "COMPLETELY NEW clan"
+    }
+  },
+  "extraction_format": {
+    "example": {
+      "book": "players-guide",
+      "disciplines": ["Discipline1", "Discipline2", "Discipline3"],
+      "bane": "Description of clan bane",
+      "compulsion": "Description of clan compulsion"
+    }
+  }
+}

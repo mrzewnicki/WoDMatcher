@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "book_id": "camarilla",
+    "book_name": "Camarilla",
+    "source_file": "R:\\Podręczniki\\Wampir\\Vampire The Masquerade V5 - Camarilla - PDF Room.pdf",
+    "extraction_status": "pending",
+    "content_type": "banu_haqim_rituals"
+  },
+  "rituals": {
+    "_note": "Banu Haqim specific rituals from page 168"
+  }
+}

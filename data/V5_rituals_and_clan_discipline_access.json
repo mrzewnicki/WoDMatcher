@@ -1,0 +1,1111 @@
+{
+  "_meta": {
+    "title": "Vampire: The Masquerade V5 — Rituals and Clan Discipline Access",
+    "scope": [
+      "Vampire: The Masquerade V5 Corebook Extended",
+      "Vampire: The Masquerade V5 Players Guide",
+      "Vampire: The Masquerade V5 Camarilla",
+      "Vampire: The Masquerade V5 Cults of the Blood Gods",
+      "Vampire: The Masquerade V5 Sabbat: Black Hand"
+    ],
+    "notes": {
+      "core_blood_sorcery": "Blood Sorcery unlocks Rituals up to the level of the Discipline. Corebook standard: Rouse Check, five minutes per level, and Intelligence + Blood Sorcery against Difficulty equal to Ritual level + 1 unless a Ritual states otherwise.",
+      "oblivion_ceremonies": "Oblivion Ceremonies use a similar framework but require a prerequisite Oblivion power. Players Guide: Resolve + Oblivion, Difficulty equal to Ceremony level + 1, five minutes per level unless stated otherwise.",
+      "sourcebook_overlap": "Some powers/rituals are revised or repeated between books. This JSON keeps sourcebook-specific entries rather than silently merging them."
+    }
+  },
+  "clans": {
+    "Brujah": [
+      "Celerity",
+      "Potence",
+      "Presence"
+    ],
+    "Gangrel": [
+      "Animalism",
+      "Fortitude",
+      "Protean"
+    ],
+    "Malkavian": [
+      "Auspex",
+      "Dominate",
+      "Obfuscate"
+    ],
+    "Nosferatu": [
+      "Animalism",
+      "Obfuscate",
+      "Potence"
+    ],
+    "Toreador": [
+      "Auspex",
+      "Celerity",
+      "Presence"
+    ],
+    "Tremere": [
+      "Auspex",
+      "Dominate",
+      "Blood Sorcery"
+    ],
+    "Ventrue": [
+      "Dominate",
+      "Fortitude",
+      "Presence"
+    ],
+    "Caitiff": [],
+    "Thin-Blooded": [
+      "Thin-Blood Alchemy"
+    ],
+    "Banu Haqim": [
+      "Blood Sorcery",
+      "Celerity",
+      "Obfuscate"
+    ],
+    "Hecata": [
+      "Auspex",
+      "Fortitude",
+      "Oblivion"
+    ],
+    "Lasombra": [
+      "Dominate",
+      "Oblivion",
+      "Potence"
+    ],
+    "Ministry": [
+      "Obfuscate",
+      "Presence",
+      "Protean"
+    ],
+    "Ravnos": [
+      "Animalism",
+      "Obfuscate",
+      "Presence"
+    ],
+    "Salubri": [
+      "Auspex",
+      "Fortitude",
+      "Obfuscate"
+    ],
+    "Tzimisce": [
+      "Animalism",
+      "Dominate",
+      "Protean"
+    ]
+  },
+  "clan_metadata": {
+    "Caitiff": {
+      "source": "Corebook",
+      "special_rule": "Three Disciplines of the player's choice following the Embrace; they are not considered in-clan for Experience cost purposes."
+    },
+    "Thin-Blooded": {
+      "source": "Corebook",
+      "special_rule": "Thin-Blood Alchemy is the listed Discipline; thin-bloods can temporarily access other Disciplines through feeding and resonance rules."
+    }
+  },
+  "discipline_to_clans": {
+    "Celerity": [
+      "Brujah",
+      "Toreador",
+      "Banu Haqim"
+    ],
+    "Potence": [
+      "Brujah",
+      "Nosferatu",
+      "Lasombra"
+    ],
+    "Presence": [
+      "Brujah",
+      "Toreador",
+      "Ventrue",
+      "Ministry",
+      "Ravnos"
+    ],
+    "Animalism": [
+      "Gangrel",
+      "Nosferatu",
+      "Ravnos",
+      "Tzimisce"
+    ],
+    "Fortitude": [
+      "Gangrel",
+      "Ventrue",
+      "Hecata",
+      "Salubri"
+    ],
+    "Protean": [
+      "Gangrel",
+      "Ministry",
+      "Tzimisce"
+    ],
+    "Auspex": [
+      "Malkavian",
+      "Toreador",
+      "Tremere",
+      "Hecata",
+      "Salubri"
+    ],
+    "Dominate": [
+      "Malkavian",
+      "Tremere",
+      "Ventrue",
+      "Lasombra",
+      "Tzimisce"
+    ],
+    "Obfuscate": [
+      "Malkavian",
+      "Nosferatu",
+      "Banu Haqim",
+      "Ministry",
+      "Ravnos",
+      "Salubri"
+    ],
+    "Blood Sorcery": [
+      "Tremere",
+      "Banu Haqim"
+    ],
+    "Thin-Blood Alchemy": [
+      "Thin-Blooded"
+    ],
+    "Oblivion": [
+      "Hecata",
+      "Lasombra"
+    ]
+  },
+  "rituals": {
+    "Blood Sorcery": {
+      "access_rule": {
+        "discipline_required": "Blood Sorcery",
+        "maximum_ritual_level": "equal to current Blood Sorcery rating",
+        "core_learning": "At character creation, one Level 1 Ritual can be chosen with at least one dot in Blood Sorcery. Further Rituals cost ritual level × 3 Experience and require learning time.",
+        "source": "Corebook"
+      },
+      "sources": {
+        "Corebook": {
+          "page_range": "274-281",
+          "rituals": {
+            "1": [
+              "Blood Walk",
+              "Clinging of the Insect",
+              "Craft Bloodstone",
+              "Wake with Evening's Freshness",
+              "Ward Against Ghouls"
+            ],
+            "2": [
+              "Communicate with Kindred Sire",
+              "Eyes of Babel",
+              "Illuminate the Trail of Prey",
+              "Truth of Blood",
+              "Ward Against Spirits",
+              "Warding Circle Against Ghouls"
+            ],
+            "3": [
+              "Dagon's Call",
+              "Deflection of Wooden Doom",
+              "Essence of Air",
+              "Firewalker",
+              "Ward Against Lupines",
+              "Warding Circle Against Spirits"
+            ],
+            "4": [
+              "Defense of the Sacred Haven",
+              "Eyes of the Nighthawk",
+              "Incorporeal Passage",
+              "Ward Against Cainites",
+              "Warding Circle Against Lupines"
+            ],
+            "5": [
+              "Escape to True Sanctuary",
+              "Heart of Stone",
+              "Shaft of Belated Dissolution",
+              "Warding Circle Against Cainites"
+            ]
+          }
+        },
+        "Players Guide": {
+          "page_range": "99-102",
+          "rituals": {
+            "1": [
+              "Douse the Fear",
+              "Seal the Brand"
+            ],
+            "2": [
+              "As Fog on Water",
+              "Calix Secretus",
+              "Soporific Touch"
+            ],
+            "3": [
+              "Fire in the Blood",
+              "One with the Blade"
+            ],
+            "4": [
+              "Feast of Ashes",
+              "Guided Memory",
+              "Invisible Chains of Binding"
+            ],
+            "5": [
+              "Antebrachia Ignium"
+            ]
+          }
+        },
+        "Camarilla": {
+          "page_range": "168-169",
+          "rituals": {
+            "2": [
+              "Ishtar's Touch"
+            ],
+            "3": [
+              "One with the Blade"
+            ]
+          }
+        },
+        "Cults of the Blood Gods": {
+          "page_range": "55-67",
+          "rituals": {
+            "1": [
+              "Coax the Garden",
+              "Dampen the Fear"
+            ],
+            "3": [
+              "Fire in the Blood"
+            ],
+            "5": [
+              "Eden's Bounty",
+              "Creatio Ignis"
+            ]
+          }
+        },
+        "Sabbat: Black Hand": {
+          "page_range": "50-52",
+          "rituals": {
+            "1": [
+              "Odbiest"
+            ],
+            "3": [
+              "Wspólny Wigor",
+              "Galwaniczne Spustoszenie"
+            ],
+            "5": [
+              "Brama-Symulakrum"
+            ]
+          }
+        }
+      }
+    },
+    "Oblivion Ceremonies": {
+      "access_rule": {
+        "discipline_required": "Oblivion",
+        "prerequisite": "Each Ceremony has a prerequisite Oblivion power; a character must meet that prerequisite.",
+        "learning": "At character creation, one Level 1 Ceremony can be chosen when the prerequisite power is known. Further Ceremonies cost level × 3 Experience and require learning time and a teacher.",
+        "source": "Players Guide / Cults of the Blood Gods"
+      },
+      "sources": {
+        "Players Guide": {
+          "page_range": "91-94",
+          "ceremonies": {
+            "1": [
+              "The Gift of False Life",
+              "Summon Spirit"
+            ],
+            "2": [
+              "Awaken the Homuncular Servant",
+              "Compel Spirit"
+            ],
+            "3": [
+              "Host Spirit",
+              "Shambling Hordes",
+              "Aggressive Corpse"
+            ],
+            "4": [
+              "Bind the Spirit",
+              "Split the Shroud"
+            ],
+            "5": [
+              "Ex Nihilo",
+              "Lazarene Blessing"
+            ]
+          }
+        },
+        "Cults of the Blood Gods — Hecata": {
+          "page_range": "208-216",
+          "ceremonies": {
+            "1": [
+              "The Gift of False Life",
+              "Summon Spirit"
+            ],
+            "2": [
+              "Awaken the Homuncular Servant",
+              "Compel Spirit"
+            ],
+            "3": [
+              "Host Spirit",
+              "Shambling Hordes"
+            ],
+            "4": [
+              "Bind the Spirit",
+              "Split the Shroud"
+            ],
+            "5": [
+              "Ex Nihilo",
+              "Lazarene Blessing"
+            ]
+          }
+        },
+        "Cults of the Blood Gods — Shalim": {
+          "page_range": "93-94",
+          "ceremonies": {
+            "1": [
+              "Traveler's Call"
+            ],
+            "3": [
+              "Name of the Father"
+            ],
+            "5": [
+              "Pit of Contemplation"
+            ]
+          },
+          "prerequisite_note": "Shalimite Ceremonies use Oblivion powers from Chicago by Night as prerequisites."
+        }
+      }
+    }
+  },
+  "ritual_index": [
+    {
+      "name": "Blood Walk",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Clinging of the Insect",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Craft Bloodstone",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Wake with Evening's Freshness",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Ward Against Ghouls",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Communicate with Kindred Sire",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Eyes of Babel",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Illuminate the Trail of Prey",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Truth of Blood",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Ward Against Spirits",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Warding Circle Against Ghouls",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Dagon's Call",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Deflection of Wooden Doom",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Essence of Air",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Firewalker",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Ward Against Lupines",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Warding Circle Against Spirits",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Defense of the Sacred Haven",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Eyes of the Nighthawk",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Incorporeal Passage",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Ward Against Cainites",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Warding Circle Against Lupines",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Escape to True Sanctuary",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Heart of Stone",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Shaft of Belated Dissolution",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Warding Circle Against Cainites",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Corebook",
+      "page_range": "274-281"
+    },
+    {
+      "name": "Douse the Fear",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Seal the Brand",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "As Fog on Water",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Calix Secretus",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Soporific Touch",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Fire in the Blood",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "One with the Blade",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Feast of Ashes",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Guided Memory",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Invisible Chains of Binding",
+      "level": 4,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Antebrachia Ignium",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Players Guide",
+      "page_range": "99-102"
+    },
+    {
+      "name": "Ishtar's Touch",
+      "level": 2,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Camarilla",
+      "page_range": "168-169"
+    },
+    {
+      "name": "One with the Blade",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Camarilla",
+      "page_range": "168-169"
+    },
+    {
+      "name": "Coax the Garden",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Cults of the Blood Gods",
+      "page_range": "55-67"
+    },
+    {
+      "name": "Dampen the Fear",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Cults of the Blood Gods",
+      "page_range": "55-67"
+    },
+    {
+      "name": "Fire in the Blood",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Cults of the Blood Gods",
+      "page_range": "55-67"
+    },
+    {
+      "name": "Eden's Bounty",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Cults of the Blood Gods",
+      "page_range": "55-67"
+    },
+    {
+      "name": "Creatio Ignis",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Cults of the Blood Gods",
+      "page_range": "55-67"
+    },
+    {
+      "name": "Odbiest",
+      "level": 1,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Sabbat: Black Hand",
+      "page_range": "50-52"
+    },
+    {
+      "name": "Wspólny Wigor",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Sabbat: Black Hand",
+      "page_range": "50-52"
+    },
+    {
+      "name": "Galwaniczne Spustoszenie",
+      "level": 3,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Sabbat: Black Hand",
+      "page_range": "50-52"
+    },
+    {
+      "name": "Brama-Symulakrum",
+      "level": 5,
+      "type": "Blood Sorcery Ritual",
+      "discipline": "Blood Sorcery",
+      "sourcebook": "Sabbat: Black Hand",
+      "page_range": "50-52"
+    },
+    {
+      "name": "The Gift of False Life",
+      "level": 1,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Summon Spirit",
+      "level": 1,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Awaken the Homuncular Servant",
+      "level": 2,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Compel Spirit",
+      "level": 2,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Host Spirit",
+      "level": 3,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Shambling Hordes",
+      "level": 3,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Aggressive Corpse",
+      "level": 3,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Bind the Spirit",
+      "level": 4,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Split the Shroud",
+      "level": 4,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Ex Nihilo",
+      "level": 5,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "Lazarene Blessing",
+      "level": 5,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Players Guide",
+      "page_range": "91-94"
+    },
+    {
+      "name": "The Gift of False Life",
+      "level": 1,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Summon Spirit",
+      "level": 1,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Awaken the Homuncular Servant",
+      "level": 2,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Compel Spirit",
+      "level": 2,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Host Spirit",
+      "level": 3,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Shambling Hordes",
+      "level": 3,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Bind the Spirit",
+      "level": 4,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Split the Shroud",
+      "level": 4,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Ex Nihilo",
+      "level": 5,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Lazarene Blessing",
+      "level": 5,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Hecata",
+      "page_range": "208-216"
+    },
+    {
+      "name": "Traveler's Call",
+      "level": 1,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Shalim",
+      "page_range": "93-94"
+    },
+    {
+      "name": "Name of the Father",
+      "level": 3,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Shalim",
+      "page_range": "93-94"
+    },
+    {
+      "name": "Pit of Contemplation",
+      "level": 5,
+      "type": "Oblivion Ceremony",
+      "discipline": "Oblivion Ceremonies",
+      "sourcebook": "Cults of the Blood Gods — Shalim",
+      "page_range": "93-94"
+    }
+  ],
+  "ritual_details": {
+    "Players Guide": {
+      "Douse the Fear": {
+        "level": 1,
+        "ingredients": "A holy object such as a crucifix, Bible, or Qur'an.",
+        "process": "Expose the holy symbol to a flame without needing to destroy it.",
+        "system": "+2 dice to rolls resisting Rötschreck; a critical win removes the need for Terror Frenzy rolls. Lasts one night."
+      },
+      "Seal the Brand": {
+        "level": 1,
+        "ingredients": "Molten silver poured over a tattoo, brand, or other body modification.",
+        "process": "Pour molten silver over the mark. The target suffers Superficial damage, then the modification becomes permanent once mended.",
+        "system": "The body modification becomes permanent and cannot be removed by other means."
+      },
+      "As Fog on Water": {
+        "level": 2,
+        "ingredients": "A piece of wood from a ship and water.",
+        "process": "Submerge the wood in the target body of water while spilling Blood into it.",
+        "system": "On a successful Ritual roll, the vampire can walk silently across the surface for the rest of the night."
+      },
+      "Calix Secretus": {
+        "level": 2,
+        "ingredients": "A hand-sized object and the user's Blood.",
+        "process": "Drench the object in Blood and speak the Ritual words.",
+        "system": "After an hour and a successful roll, Blood can be stored in the object. Every two Rouse Checks worth of stored Blood can sate one Hunger when released."
+      },
+      "Soporific Touch": {
+        "level": 2,
+        "ingredients": "A small amount of hashish or another narcotic.",
+        "process": "Mix the substance with the user's Blood and rub it between the fingers while reciting the incantation.",
+        "system": "After contact, the target resists the Ritual; on a win the target suffers a penalty equal to the margin on resistance pools involving Composure or Resolve for the remainder of the scene."
+      },
+      "Fire in the Blood": {
+        "level": 3,
+        "ingredients": "Target's blood sample, a visual depiction of the target, and a red-wax candle or iron lighter.",
+        "process": "Burn the blood sample while concentrating on the target's image.",
+        "system": "Contest the Ritual against Resolve + Occult or Resolve + Fortitude. Each margin success inflicts one Superficial Health damage and imposes a -2 Physical penalty for the scene; critical raises the penalty to -3."
+      },
+      "One with the Blade": {
+        "level": 3,
+        "ingredients": "A melee weapon and enough of the caster's vitae to immerse it.",
+        "process": "Submerge the weapon in Blood and swear an oath over it until the following sunrise.",
+        "system": "The weapon becomes mystically dedicated to the vampire. When anointed with the user's Blood it gains +2 dice in combat for one scene. Only one such weapon may be dedicated at a time."
+      },
+      "Feast of Ashes": {
+        "level": 4,
+        "ingredients": "Parchment with the target's name, the parchment's ashes, and the caster's Blood.",
+        "process": "Burn the parchment, collect the ashes, and use them with Blood to write the Ritual sigils.",
+        "system": "On a successful contest against Resolve + Willpower, the target cannot consume Blood for one night. Ash alone can sate Hunger, and cannot reduce it below 3."
+      },
+      "Guided Memory": {
+        "level": 4,
+        "ingredients": "Another vampire's vitae, dried rosemary, and fresh poppies or forget-me-nots.",
+        "process": "Burn the flowers and rosemary, blend the ashes with the donor's vitae, and drink it.",
+        "system": "Enters a guided Memoriam and may acquire a temporary Level 1-3 Discipline power or Merit appropriate to the memory. Gifts fade after the session.",
+        "notes": "The Storyteller decides the exact gift available from the Memoriam."
+      },
+      "Invisible Chains of Binding": {
+        "level": 4,
+        "ingredients": "A link of chain.",
+        "process": "Inscribed with the caster's Blood over an hour and thrown at the target when activated.",
+        "system": "Contest against Strength + Resolve. The target is unable to move from the spot for one hour per margin success while the link remains intact and within roughly 3 meters. The target suffers a four-dice penalty to physical defense, Brawl, and Melee actions."
+      },
+      "Antebrachia Ignium": {
+        "level": 5,
+        "ingredients": "Enough vampire vitae to coat the arms to the elbows and a flame source.",
+        "process": "Immerse both arms in Blood, then expose the coating to flame so the vitae ignites rather than the vampire.",
+        "system": "Creates controllable flames on the arms that can set targets alight and inflict Aggravated damage. Hunger 4+ requires a Hunger Frenzy test to avoid draining the ingredients."
+      }
+    },
+    "Camarilla": {
+      "Ishtar's Touch": {
+        "level": 2,
+        "ingredients": "A small amount of hashish or another narcotic.",
+        "process": "Mix the narcotic with the user's Blood and rub it between the fingers while chanting.",
+        "system": "After contact, the target resists the Ritual. On a win, the target suffers a penalty equal to the Ritual margin on resistance pools involving Composure or Resolve for the scene."
+      },
+      "One with the Blade": {
+        "level": 3,
+        "ingredients": "A melee weapon and enough vitae to immerse it.",
+        "process": "Submerge the weapon in vitae and dedicate it until sunrise.",
+        "system": "Creates a mystically dedicated weapon that remains pristine while owned by the caster and can receive +2 dice when anointed with the caster's Blood."
+      }
+    },
+    "Cults of the Blood Gods": {
+      "Coax the Garden": {
+        "level": 1,
+        "ingredients": "Human blood and poppy seeds.",
+        "process": "Cast the blood-and-poppy-seed mixture onto the earth to rouse nearby plant life.",
+        "system": "Animated plants impose a -2 Physical penalty within the affected area and can grapple victims. A critical win doubles plant damage; the effect lasts until the end of the scene."
+      },
+      "Eden's Bounty": {
+        "level": 5,
+        "ingredients": "A dead body, a living tree, one fresh apple, and one rotten apple.",
+        "process": "Place the body at the tree, healthy apple in its mouth and rotten apple in the caster's mouth; the body merges with the tree as nearby mortal blood is drawn through the earth.",
+        "system": "On a win, Hunger is reduced to 1; on a critical win, to 0 without killing. On a total failure, Hunger Frenzy occurs. Nearby kine suffer lasting physical penalties and Health damage."
+      },
+      "Dampen the Fear": {
+        "level": 1,
+        "ingredients": "A holy object such as a crucifix, Bible, or Qur'an.",
+        "process": "Expose the holy symbol to fire before interacting with fire.",
+        "system": "+2 dice to resist Rötschreck; critical success removes Terror Frenzy rolls. Lasts for the scene."
+      },
+      "Fire in the Blood": {
+        "level": 3,
+        "ingredients": "Target's blood sample, visual depiction, and red candle or iron lighter.",
+        "process": "Burn the target's blood while concentrating on their image.",
+        "system": "Contest against Resolve + Occult or Resolve + Fortitude. Margin inflicts Superficial Health damage and a Physical penalty; critical increases the penalty. Kindred targets must make a Rouse Check."
+      },
+      "Creatio Ignis": {
+        "level": 5,
+        "ingredients": "Enough vampire vitae to coat the caster's arms to the elbows and a flame source.",
+        "process": "Immerse arms in vitae and ignite the vitae coating.",
+        "system": "The caster's arms burn without harming the caster's arms and can inflict Aggravated damage on touched targets. Nearby vampires must test Terror Frenzy."
+      },
+      "Traveler's Call": {
+        "level": 1,
+        "ingredients": "The Shalimite black book.",
+        "process": "Invoke the Ceremony while holding the book and focusing on another Shalimite's name.",
+        "system": "On a successful Ceremony roll the target receives a flashing vision of the caller's surroundings and suffers a -2 concentration penalty for the scene. A critical win permits a one-word message.",
+        "prerequisite_power": "Oblivion's Sight"
+      },
+      "Name of the Father": {
+        "level": 3,
+        "ingredients": "Ability to speak ancient Greek, eye contact with the victim, and five charcoal sticks.",
+        "process": "Recite an ancient Greek invocation while crushing charcoal and maintaining eye contact.",
+        "system": "On a successful contest against Resolve + Composure, the victim is paralyzed by despair for a number of turns equal to the margin. Willpower can be spent to break free.",
+        "prerequisite_power": "Shadow Perspective"
+      },
+      "Pit of Contemplation": {
+        "level": 5,
+        "ingredients": "A pot of ink, three pints/six liters or more of blood from an innocent murdered by the caster, and an unlit room.",
+        "process": "Paint a doorway on a wall with the victim's blood, then splash ink across it and open a tear into Oblivion.",
+        "system": "A successful Ceremony creates a hole that draws air, objects, and people into a pocket of Oblivion. Mortals are killed instantly; undead remain trapped until released.",
+        "prerequisite_power": "Tenebrous Avatar"
+      }
+    },
+    "Sabbat: Black Hand": {
+      "Odbiest": {
+        "level": 1,
+        "ingredients": "Vinegar or alcohol.",
+        "process": "Sprinkle the substance over the ground and circle the area counterclockwise while focusing on the perimeter.",
+        "system": "On success, animals, vermin, and similar low-intelligence life flee an area of roughly 100 square meters. Lasts one scene or one night."
+      },
+      "Wspólny Wigor": {
+        "level": 3,
+        "ingredients": "A claw/fingernail from the Pack Priest.",
+        "process": "The priest breaks the nail into pieces, places theirs in the Vaulderie cup, and the pack members place pieces under their tongues.",
+        "system": "On success, the pack's Blood Potency rises to the priest's Blood Potency and the priest gains +3 dice to Dominate or Presence tests against pack members for one night."
+      },
+      "Galwaniczne Spustoszenie": {
+        "level": 3,
+        "ingredients": "A copper coin.",
+        "process": "Spread Blood over the coin and stomp on it.",
+        "system": "Disrupts electrical systems in an area roughly equivalent to a large warehouse or three-story building. Critical success keeps the failure relatively discreet; otherwise fires and alarms may result."
+      },
+      "Brama-Symulakrum": {
+        "level": 5,
+        "ingredients": "Materials to construct an exact copy of the destination and sacrificial victims.",
+        "process": "Build and blood-consecrate a physical replica of the destination over an extended preparation period.",
+        "system": "Creates a portal allowing a designated number of vampires to travel between the two locations. The portal remains open until the stated number of travelers has crossed."
+      }
+    }
+  }
+}
