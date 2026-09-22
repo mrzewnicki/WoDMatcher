@@ -1,6 +1,6 @@
 import type { DiceTerm, PowerEntry } from '../types'
 
-const SKIP_KEYS = new Set(['General Rules', 'Rituals'])
+const SKIP_KEYS = new Set(['General Rules', 'Rituals', '_meta'])
 
 const ATTRIBUTES = new Set([
   'Strength',
@@ -54,11 +54,23 @@ const DISCIPLINES = new Set([
   'Dominate',
   'Fortitude',
   'Obfuscate',
+  'Oblivion',
   'Potence',
   'Presence',
   'Protean',
   'Thin-Blood Alchemy',
 ])
+
+/** Map sourcebook display names → V5_books.json ids. */
+const BOOK_NAME_TO_ID: Record<string, string> = {
+  "Player's Guide": 'players-guide',
+  'Cults of the Blood Gods': 'cults-of-the-blood-gods',
+  'Sabbat: Czarna Ręka': 'sabbat',
+  Sabbat: 'sabbat',
+  Anarchiści: 'anarch',
+  Anarch: 'anarch',
+  'Chicago by Night': 'chicago-by-night',
+}
 
 export type TraitGroups = {
   skills: string[]
@@ -73,6 +85,11 @@ function classifyTrait(trait: string): keyof TraitGroups {
   return 'other'
 }
 
+type RawSource = {
+  book?: string
+  page?: number
+}
+
 type RawPower = {
   name?: string
   cost?: string
@@ -80,6 +97,7 @@ type RawPower = {
   amalgam?: string
   system?: string
   dice_pools?: string[]
+  sources?: RawSource[]
 }
 
 type RawDiscipline = {
@@ -89,10 +107,55 @@ type RawDiscipline = {
 
 function normalizeToken(value: string): string {
   return value
-    .replace(/\(.*?\)/g, '')
+    .replace(/\([^)]*\)/g, '')
     .replace(/\s+or as needed.*$/i, '')
     .replace(/\s+/g, ' ')
     .trim()
+}
+
+function splitAlternatives(value: string): string[] {
+  return value
+    .split(/\s+(?:\/|or)\s+/i)
+    .map((part) => normalizeToken(part))
+    .filter(Boolean)
+}
+
+function pushTerm(terms: DiceTerm[], attribute: string, trait: string) {
+  const attrAlts = splitAlternatives(attribute)
+  const traitAlts = splitAlternatives(trait)
+
+  for (const attr of attrAlts) {
+    if (!ATTRIBUTES.has(attr)) continue
+    for (const t of traitAlts) {
+      // Skip non-trait fragments like "Stamina × 2" or difficulty prose.
+      if (!t || /[×x]\s*\d/i.test(t) || /^difficulty\b/i.test(t)) continue
+      terms.push({ attribute: attr, trait: t })
+    }
+  }
+}
+
+/** Split a contest side into pool chunks without breaking parentheticals or Attr or Attr + Trait. */
+function splitSideChunks(side: string): string[] {
+  // Protect commas inside parentheses so "Survival (Famulus, …)" stays one chunk.
+  const protectedSide = side.replace(/\([^)]*\)/g, (m) => m.replace(/,/g, '\0'))
+  const commaParts = protectedSide
+    .split(',')
+    .map((s) => s.replace(/\0/g, ',').trim())
+    .filter(Boolean)
+
+  const chunks: string[] = []
+  for (const part of commaParts) {
+    const orParts = part.split(/\s+or\s+/i)
+    // "Stamina × 2 or Stamina + Fortitude" → split
+    // "Composure or Stamina + Subterfuge" → keep (attribute alternatives)
+    const allComplete = orParts.every((p) => /\+|×|\bx\s*\d/i.test(p))
+    if (orParts.length > 1 && allComplete) {
+      chunks.push(...orParts.map((p) => p.trim()).filter(Boolean))
+    } else {
+      chunks.push(part)
+    }
+  }
+  return chunks
 }
 
 /** Split one pool string into Attribute + Trait pairs (attack side and resist side). */
@@ -101,32 +164,36 @@ export function parsePoolString(pool: string): DiceTerm[] {
   const sides = pool.split(/\s+vs\s+/i)
 
   for (const side of sides) {
-    const chunks = side
-      .split(',')
-      .map((s) => s.trim())
-      .filter(Boolean)
-
-    for (const chunk of chunks) {
+    for (const chunk of splitSideChunks(side)) {
       const cleaned = normalizeToken(chunk)
-      if (!cleaned || /^or\b/i.test(cleaned) || /^as well as\b/i.test(cleaned)) {
+      if (
+        !cleaned ||
+        /^or\b/i.test(cleaned) ||
+        /^as well as\b/i.test(cleaned) ||
+        /^n\/a$/i.test(cleaned) ||
+        /^see\b/i.test(cleaned) ||
+        /^as\b/i.test(cleaned)
+      ) {
         continue
       }
 
-      const plus = cleaned.match(/^(.+?)\s*\+\s*(.+)$/)
+      const plus = cleaned.match(/^(.+)\s*\+\s*(.+)$/)
       if (!plus) continue
 
       const left = normalizeToken(plus[1])
       const right = normalizeToken(plus[2])
       if (!left || !right) continue
 
+      const leftHead = left.split(/\s+(?:\/|or)\s+/i)[0]
+      const rightHead = right.split(/\s+(?:\/|or)\s+/i)[0]
+
       // Prefer Attribute on the left (standard V5 notation).
-      if (ATTRIBUTES.has(left)) {
-        terms.push({ attribute: left, trait: right })
-      } else if (ATTRIBUTES.has(right)) {
-        terms.push({ attribute: right, trait: left })
+      if (ATTRIBUTES.has(leftHead)) {
+        pushTerm(terms, left, right)
+      } else if (ATTRIBUTES.has(rightHead)) {
+        pushTerm(terms, right, left)
       } else {
-        // Fallback: treat first token as attribute-like.
-        terms.push({ attribute: left, trait: right })
+        pushTerm(terms, left, right)
       }
     }
   }
@@ -134,15 +201,25 @@ export function parsePoolString(pool: string): DiceTerm[] {
   return terms
 }
 
+function resolveBook(power: RawPower, disciplineBook?: string): string | undefined {
+  const fromSources = power.sources?.find((s) => s.book)?.book
+  if (fromSources) {
+    return BOOK_NAME_TO_ID[fromSources] ?? fromSources
+  }
+  return disciplineBook
+}
+
 export function flattenPowers(
-  data: Record<string, RawDiscipline>,
+  data: Record<string, RawDiscipline | unknown>,
 ): PowerEntry[] {
   const powers: PowerEntry[] = []
 
   for (const [discipline, body] of Object.entries(data)) {
-    if (SKIP_KEYS.has(discipline) || !body?.levels) continue
+    if (SKIP_KEYS.has(discipline) || !body || typeof body !== 'object') continue
+    const disc = body as RawDiscipline
+    if (!disc.levels) continue
 
-    for (const [levelKey, levelPowers] of Object.entries(body.levels)) {
+    for (const [levelKey, levelPowers] of Object.entries(disc.levels)) {
       const level = Number(levelKey)
       for (const [powerKey, power] of Object.entries(levelPowers)) {
         const rawPools = power.dice_pools ?? []
@@ -156,7 +233,7 @@ export function flattenPowers(
           discipline,
           level,
           name: power.name ?? powerKey,
-          book: body.book,
+          book: resolveBook(power, disc.book),
           cost: power.cost,
           duration: power.duration,
           amalgam: power.amalgam,

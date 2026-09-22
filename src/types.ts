@@ -1,4 +1,4 @@
-export type MatchKind = 'full' | 'partial'
+export type MatchKind = 'full' | 'partial' | 'all'
 
 export type DiceTerm = {
   attribute: string
@@ -15,16 +15,22 @@ export type Book = {
   file_path?: string
 }
 
+export type PowerKind = 'power' | 'ritual' | 'ceremony'
+
 export type PowerEntry = {
   id: string
   discipline: string
   level: number
   name: string
   book?: BookId
+  kind?: PowerKind
   cost?: string
   duration?: string
   amalgam?: string
   system?: string
+  ingredients?: string
+  process?: string
+  prerequisite?: string
   rawPools: string[]
   terms: DiceTerm[]
 }

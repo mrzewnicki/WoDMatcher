@@ -4,16 +4,40 @@ function same(a: string, b: string): boolean {
   return a.localeCompare(b, undefined, { sensitivity: 'accent' }) === 0
 }
 
+function sortResults(results: MatchResult[]): MatchResult[] {
+  const rank = (k: MatchKind) =>
+    k === 'full' ? 0 : k === 'partial' ? 1 : 2
+  return results.sort((a, b) => {
+    const byKind = rank(a.kind) - rank(b.kind)
+    if (byKind !== 0) return byKind
+    const byDisc = a.power.discipline.localeCompare(b.power.discipline)
+    if (byDisc !== 0) return byDisc
+    return (
+      a.power.level - b.power.level || a.power.name.localeCompare(b.power.name)
+    )
+  })
+}
+
 /**
  * Full match: both arguments are selected and a power term contains both.
  * Partial match: exactly one of the two arguments matches (or only one was selected).
+ * No pool filters: return every power as kind "all".
  */
 export function matchPowers(
   powers: PowerEntry[],
   attribute: string | null,
   trait: string | null,
 ): MatchResult[] {
-  if (!attribute && !trait) return []
+  if (!attribute && !trait) {
+    return sortResults(
+      powers.map((power) => ({
+        power,
+        kind: 'all' as const,
+        matchedTerms: [],
+        matchedPool: power.rawPools.join('; '),
+      })),
+    )
+  }
 
   const results: MatchResult[] = []
 
@@ -36,7 +60,6 @@ export function matchPowers(
       return false
     })
 
-    // If any term is a full pair match, surface those terms for the card.
     if (kind === 'full' && attribute && trait) {
       const fullOnly = power.terms.filter(
         (term) =>
@@ -61,12 +84,5 @@ export function matchPowers(
     })
   }
 
-  const rank = (k: MatchKind) => (k === 'full' ? 0 : 1)
-  return results.sort((a, b) => {
-    const byKind = rank(a.kind) - rank(b.kind)
-    if (byKind !== 0) return byKind
-    const byDisc = a.power.discipline.localeCompare(b.power.discipline)
-    if (byDisc !== 0) return byDisc
-    return a.power.level - b.power.level || a.power.name.localeCompare(b.power.name)
-  })
+  return sortResults(results)
 }
